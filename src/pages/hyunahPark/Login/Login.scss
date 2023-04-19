@@ -1,0 +1,95 @@
+// @import '../../../styles/mixin.scss'
+@import "../../../styles/variables";
+
+/////////////////
+@mixin flexSort($justify, $alignItemts) {
+  display: flex;
+  align-items: $alignItemts;
+  justify-content: $justify;
+}
+
+@mixin circleBorder {
+  border-radius: 70%;
+}
+
+@mixin bold {
+  font-weight: bold;
+}
+/////////////////
+
+@mixin input_wh {
+  width: 80%;
+  height: 35px;
+}
+
+@mixin input_idpw {
+  margin-right: 30px;
+  margin-bottom: 7px;
+  margin-left: 30px;
+  border-width: 1px;
+  border-radius: 5px;
+
+  border-color: $body-white;
+
+  background-color: $body-white;
+
+  font-size: 15px;
+}
+
+//body
+.login {
+  @include flexSort(center, center);
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $body-white;
+
+  .loginBox {
+    width: 400px;
+    border: 1px $body-white solid;
+    background-color: white;
+    text-align: center;
+
+    .logo {
+      margin: 50px;
+
+      font-family: "Lobster";
+      font-size: 350%;
+      font-weight: lighter;
+    }
+
+    .id {
+      @include input_wh();
+      @include input_idpw();
+    }
+
+    .password {
+      @include input_wh();
+      @include input_idpw();
+    }
+
+    .button {
+      @include input_wh();
+
+      margin-top: 10px;
+
+      border: none;
+      border-radius: 5px;
+
+      background-color: #9cd3f8;
+
+      color: white;
+      text-align: center;
+    }
+
+    .forget {
+      margin-top: 30%;
+      margin-bottom: 10%;
+      color: #065183;
+
+      font-size: 120%;
+      @include bold;
+    }
+  }
+}

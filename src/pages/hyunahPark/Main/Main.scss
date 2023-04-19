@@ -1,0 +1,339 @@
+// @import '../../../styles/mixin.scss'
+@import "../../../styles/variables";
+
+/////////////////
+@mixin flexSort($justify, $alignItemts) {
+  display: flex;
+  align-items: $alignItemts;
+  justify-content: $justify;
+}
+
+@mixin circleBorder {
+  border-radius: 70%;
+}
+
+@mixin bold {
+  font-weight: bold;
+}
+/////////////////
+
+//body
+.main {
+  padding: 0%;
+  background-color: rgb(245, 245, 245);
+}
+
+@mixin article_ele_padding {
+  padding: 7px;
+  padding-top: 0px;
+}
+
+@mixin right_profile_id {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+
+  padding-left: 10px;
+}
+
+///////////
+// .navPart {
+//   @include flexSort(space-between, none);
+
+//   padding: 10px;
+
+//   border-bottom: 1px solid $body-white;
+//   background-color: white;
+
+//   font-family: "Lobster";
+//   font-size: 30pt;
+
+//   .nav_part {
+//     @include flexSort(space-between, center);
+
+//     .westagram_logo {
+//       margin-left: 20px;
+//       padding-left: 10px;
+
+//       border-left: 2px solid black;
+//     }
+//   }
+
+//   .search {
+//     outline: none;
+//     text-align: center;
+//   }
+// }
+
+.mainPart {
+  display: flex;
+
+  // 1. main-feeds (2. main-right)
+  .main-feeds {
+    width: 60%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    padding-left: 20%;
+
+    background-color: $body-white;
+
+    .articlePart {
+      width: 500px;
+
+      border: 1px solid $body-white;
+      background-color: white;
+
+      // 1) article head
+      .article_head {
+        @include flexSort(space-between, none);
+
+        padding: 10px;
+
+        .article_profile {
+          @include flexSort(space-between, center);
+
+          .mickey_profile_img {
+            @include circleBorder;
+          }
+
+          .article_profile_id {
+            @include bold;
+          }
+        }
+      }
+
+      // 2) article main img
+
+      // 3) article react icon
+      .article_react_icon {
+        @include flexSort(space-between, center);
+
+        @include article_ele_padding();
+        margin-top: 5px;
+
+        & i {
+          font-size: 30px;
+        }
+
+        .article_react_icon_right {
+          @include flexSort(space-between, center);
+
+          width: 120px;
+
+          #article_react_icon_heart {
+            color: #ff007b;
+          }
+        }
+      }
+
+      // 4) article like
+
+      .article_like {
+        @include flexSort(none, center);
+
+        @include article_ele_padding();
+
+        .icecream_profile_img {
+          @include circleBorder;
+        }
+
+        .article_like_profile_id {
+          @include bold;
+        }
+
+        .article_like_profile_etc {
+          @include bold;
+        }
+      }
+
+      // 5) article content
+
+      .article_content {
+        display: flex;
+
+        @include article_ele_padding();
+
+        .article_content_profile_id {
+          @include bold;
+        }
+
+        .article_content_more {
+          @include flexSort(space-between, end);
+
+          color: gray;
+          font-size: 14px;
+        }
+      }
+
+      // 6) article reply
+
+      .article_reply {
+        @include article_ele_padding();
+
+        .article_reply_add {
+          @include flexSort(space-between, center);
+        }
+
+        .article_reply_profile_id {
+          @include bold;
+        }
+      }
+
+      // 7) article time
+
+      .article_time {
+        @include article_ele_padding();
+
+        border-bottom: 1px solid $body-white;
+
+        color: gray;
+      }
+
+      // 8) article reply input
+
+      .article_reply_input {
+        @include flexSort(space-between, center);
+
+        @include article_ele_padding();
+        padding-right: 3px;
+
+        .reply_txt {
+          width: 90vw;
+          height: 30px;
+
+          border: none;
+          outline: none;
+
+          background-color: white;
+        }
+
+        .reply_button {
+          border: none;
+          outline: none;
+          background-color: white;
+        }
+      }
+    }
+  }
+
+  //////////
+
+  // 2. main-right (1. main-feeds -> article)
+  .main-right {
+    flex-grow: 1;
+    padding-top: 50px;
+
+    padding-left: 1%;
+
+    background-color: $body-white;
+
+    // 1. side profile
+    .side_profile {
+      @include flexSort(none, center);
+
+      margin-bottom: 10px;
+
+      .side_profile_img {
+        @include circleBorder;
+      }
+
+      .side_profile_id {
+        @include right_profile_id();
+
+        .side_profile_id_name {
+          @include bold;
+        }
+      }
+    }
+
+    // 2. story
+    .story {
+      width: 250px;
+
+      margin-bottom: 10px;
+      padding: 10px;
+
+      border: 1px solid $body-white;
+      background-color: white;
+
+      .story_domain {
+        @include flexSort(space-between, center);
+
+        margin-bottom: 20px;
+
+        .story_txt {
+          color: gray;
+          @include bold;
+        }
+
+        .story_view_all {
+          @include bold;
+        }
+      }
+
+      .story_profile {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 10px;
+
+        .story_profile_id_img {
+          @include circleBorder;
+        }
+
+        .story_profile_id {
+          @include right_profile_id();
+
+          .story_profile_id_name {
+            @include bold;
+          }
+        }
+      }
+    }
+
+    // 3. recommendation
+    .recommendation {
+      width: 250px;
+
+      margin-bottom: 10px;
+      padding: 10px;
+
+      border: 1px solid $body-white;
+      background-color: white;
+
+      .recommendation_domain {
+        @include flexSort(space-between, center);
+
+        margin-bottom: 20px;
+
+        .rec_txt {
+          color: gray;
+          @include bold;
+        }
+
+        .rec_view_all {
+          @include bold;
+        }
+      }
+
+      .recommendation_profile {
+        @include flexSort(none, center);
+
+        margin-bottom: 10px;
+
+        .rec_profile_id_img {
+          @include circleBorder;
+        }
+
+        .rec_profile_id {
+          @include right_profile_id();
+
+          .rec_profile_id_name {
+            @include bold;
+          }
+        }
+      }
+    }
+  }
+}
