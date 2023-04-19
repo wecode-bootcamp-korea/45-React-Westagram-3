@@ -5,7 +5,8 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element="" />
+        <Route path="/" element="안녕" />
+        <Route path="*" element="없는 페이지예용~" />
       </Routes>
     </BrowserRouter>
   );
