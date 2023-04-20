@@ -19,13 +19,17 @@ const LoginPage = () => {
     setPassword(event.target.value);
   };
 
+  const isUserIdValid = userId.includes("@");
+  const isPasswordValid = password.length >= 5;
+  const isLoginButtonDisabled = !isUserIdValid || !isPasswordValid;
+
   return (
     <div id="mainPage">
       <div id="titleLogin">Instagram</div>
       <div id="inputsLogin">
         <input
           id="contactLogin"
-          className="loginGrey"
+          className="userIdInput"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           value={userId}
@@ -33,7 +37,7 @@ const LoginPage = () => {
         />
         <input
           id="passwordLogin"
-          className="loginGrey"
+          className="passwordInput"
           type="password"
           placeholder="비밀번호"
           value={password}
@@ -41,10 +45,14 @@ const LoginPage = () => {
         />
       </div>
       <div id="submitLogin">
-        <button id="loginButton" onClick={goToMain}>
+        <button
+          id="loginButton"
+          onClick={goToMain}
+          disabled={isLoginButtonDisabled}
+          className={isLoginButtonDisabled ? "" : "active"}
+        >
           로그인
         </button>
-        {/* //로그인 버튼을 눌렀을때 메인페이지로 감 */}
       </div>
       <a href="" id="forgotLogin">
         비밀번호를 잊으셨나요?

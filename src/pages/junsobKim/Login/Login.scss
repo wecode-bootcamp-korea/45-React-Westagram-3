@@ -52,14 +52,21 @@ body {
       padding: 10px;
       border: 0px;
       border-radius: 3px;
-      background-color: #63b5f9;
+      background-color: #b2dffc;
       color: aliceblue;
-      font-size: 15px;
       cursor: pointer;
 
-      &:hover,
-      &.welcomeBlue {
+      &:hover {
+        background-color: #63b5f9;
+      }
+
+      &.active {
         background-color: #4ea0f4;
+      }
+
+      &:disabled {
+        background-color: #a9a9a9;
+        cursor: not-allowed;
       }
     }
   }
@@ -69,5 +76,30 @@ body {
     bottom: 30px;
     color: #546a98;
     text-decoration: none;
+  }
+}
+.userIdInput {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 3px;
+  background-color: rgb(249, 249, 249);
+  font-size: 15px;
+
+  &:focus {
+    outline: 0.5px solid rgb(108, 108, 108);
+  }
+}
+
+.passwordInput {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 3px;
+  background-color: rgb(249, 249, 249);
+  font-size: 15px;
+
+  &:focus {
+    outline: 0.5px solid rgb(108, 108, 108);
   }
 }
