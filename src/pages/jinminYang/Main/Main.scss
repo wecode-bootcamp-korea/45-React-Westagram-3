@@ -1,0 +1,303 @@
+// * {
+//   margin: 0px;
+//   padding: 0px;
+// }
+
+// body {
+//   background-color: #FAFAFA;
+// }
+
+// /* header */
+// header {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   position: fixed;
+//   margin: 0 auto;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 50px;
+
+//   /* border: 1px solid red; */
+//   background-color: #FFF;
+//   border-bottom: 1px solid #F3F3F3;
+// }
+
+// header nav {
+//   position: relative;
+
+//   display: flex;
+//   justify-content: space-between;
+
+//   width: 1150px;
+// }
+
+// header nav * {
+//   display: flex;
+//   align-items: center;
+// }
+
+// header nav img {
+//   width: 25px;
+// }
+
+// header nav .coImgDiv {
+//   border-right: 1px solid black;
+//   width: 50px;
+//   height: 30px;
+// }
+
+// header nav .coNameDiv {
+//   font-family: 'Lobster', cursive;
+
+//   padding-left: 20px;
+// }
+
+// header nav .searchDiv .searchBar {
+//   background-color: #FAFAFA;
+//   border: 1px solid #DBDBDB;
+//   border-radius: 2px;
+
+//   text-align: center;
+// }
+
+// header nav .userDiv img {
+//   margin: 5px
+// }
+
+// header nav #navMyMenu {
+//   position: absolute;
+//   top: 30px;
+//   right: 0;
+
+//   width: 300px;
+//   height: 200px;
+
+//   background-color: #FFFFFF;
+
+//   display: none;
+
+//   z-index: 10;
+
+//   border: 1px solid red;
+// }
+
+// /* main */
+// main {
+//   max-width: 1100px;
+//   height: 2000px;
+
+//   margin: 80px auto;
+// }
+
+// /* main > section */
+// main section {
+//   border: 1px solid #E6E6E6;
+//   background-color: #FFF;
+//   width: 700px;
+//   float: left;
+// }
+
+// main section article {
+//   width: 100%;
+// }
+
+// main section article .userInfo {
+//   display: flex;
+//   justify-content: space-between;
+//   line-height: 60px;
+// }
+
+// main section article .userInfo div {
+//   display: flex;
+// }
+
+// main section article .userInfo div .userImg {
+//   background-image: url("https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E");
+//   background-size: cover;
+//   background-position: center;
+
+//   width: 30px;
+//   height: 30px;
+
+//   margin: 15px;
+//   border-radius: 50%;
+// }
+
+// main section article .userInfo .userMenu {
+//   margin-right: 15px;
+
+//   font-size: 20px;
+// }
+
+// main section article .feedsImgs {
+//   width: 100%;
+//   height: 700px;
+//   background-image: url("https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+// }
+
+// main section article .feedsWork {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 10px;
+// }
+
+// main section article .feedsWork img {
+//   width: 25px;
+// }
+
+// main section article .feedsWork .wokrs {
+//   display: flex;
+//   justify-content: space-between;
+
+//   width: 100px;
+//   border: 1px solid red;
+// }
+
+// main section article .feedsWork .bookmark {
+//   width: 25px;
+// }
+
+// main section article .whoLike .whoIs .userImg {
+//   background-color: black;
+
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 50%;
+
+//   margin-right: 10px;
+// }
+
+// main section article .reples {
+//   padding: 10px;
+//   border: 1px solid red;
+// }
+
+// /* main > reply */
+// .replies .replyBox {
+//   display: flex;
+//   padding: 0 10px;
+// }
+
+// .typeReply {
+//   padding: 10px;
+// }
+
+// /* aside */
+// main aside {
+//   float: right;
+
+//   width: 380px;
+// }
+
+// main aside * {
+//   margin-bottom: 5px;
+//   padding: 5px;
+// }
+
+// /* aside > me */
+// main aside .me {
+//   display: flex;
+//   align-items: center;
+// }
+
+// main aside .me .myImg {
+//   background-color: black;
+
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+
+//   margin-right: 10px;
+// }
+
+// main aside .me .myName * {
+//   margin: 0px;
+//   padding: 0px;
+// }
+
+// main aside .users {
+//   display: flex;
+//   align-items: center;
+
+//   margin: 0px;
+//   padding: 0px;
+// }
+
+// /* aside > story , recomendUser */
+// main aside .rightHeaders {
+//   display: flex;
+//   justify-content: space-between;
+
+//   margin: 0px;
+//   padding: 0px 5px;
+// }
+
+// main aside .rightHeaders * {
+//   margin: 0px;
+// }
+
+// main aside .rightHeaders .smallHeader {
+//   color: #999999;
+// }
+
+// main aside .users .userState {
+//   display: flex;
+//   align-items: center;
+//   margin: 0px;
+//   padding-left: 10px;
+// }
+
+// main aside .users .userImg {
+//   background-color: black;
+
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;
+
+//   margin-right: 10px;
+// }
+
+// main aside .users .userDesc {
+//   margin: 0px;
+//   padding: 0px;
+//   line-height: 0px;
+// }
+
+// main aside .users .userDesc .userPlay {
+//   color: #999999;
+// }
+
+// /* aside > story */
+// main aside .story {
+//   background-color: white;
+//   border: 1px solid #E6E6E6;
+
+//   padding: 10px;
+// }
+
+// main aside .story .storyMain {
+//   margin: 0px;
+//   padding: 0px;
+// }
+
+// /* aside > recomendUser */
+// main aside .recomendUser {
+//   background-color: white;
+//   border: 1px solid #E6E6E6;
+
+//   padding: 10px;
+// }
+
+// main aside .recomendUser .recomendUserMain {
+//   margin: 0px;
+//   padding: 0px;
+// }
+
+// main aside .recomendUser .recomendUserMain .users {
+//   display: flex;
+//   justify-content: space-between;
+// }
