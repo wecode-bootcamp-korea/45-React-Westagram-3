@@ -30,8 +30,8 @@ const Router = () => {
         <Route path="/main-hyunah" element={<MainHyunah />} />
 
         {/* 양진민님의 route */}
-        <Route path="/login-jinmin" element={<MainJinmin />} />
-        <Route path="/main-jinmin" element={<LoginJinmin />} />
+        <Route path="/login-jinmin" element={<LoginJinmin />} />
+        <Route path="/main-jinmin" element={<MainJinmin />} />
 
         <Route path="*" element="없는 페이지예용~" />
       </Routes>

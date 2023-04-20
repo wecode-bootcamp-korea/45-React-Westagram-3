@@ -1,3 +1,70 @@
+$border: 1px solid red;
+
+@mixin marginCenter($tb) {
+  margin: $tb + px auto;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.login {
+  width: 100%;
+  width: 450px;
+  padding: 30px;
+
+  border: 2px solid #e6e6e6;
+  background-color: white;
+  @include marginCenter(100);
+
+  .compNameDiv {
+    margin: 20px;
+    margin-bottom: 50px;
+    font-size: 70px;
+    text-align: center;
+  }
+
+  form {
+    * {
+      width: 100%;
+      margin: 3px auto;
+      border-radius: 5px;
+    }
+
+    input {
+      height: 45px;
+      padding: 10px;
+      border: 2px solid #e6e6e6;
+    }
+
+    button {
+      height: 40px;
+      margin: 10px auto;
+      border: none;
+      background-color: #c4e1fb;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .forgotPwDiv {
+    margin-top: 120px;
+    text-align: center;
+
+    a {
+      color: #003569;
+      text-decoration: none;
+    }
+  }
+}
+
 // /* public */
 // body {
 //   font-family: 'Lobster', cursive;

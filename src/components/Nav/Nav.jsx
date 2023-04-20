@@ -4,12 +4,12 @@ import "./Nav.scss";
 
 const Nav = () => {
   return (
-    <>
+    <div className="nav">
       <Link to="/login-jinmin">로그인</Link>
       <span> </span>
       <Link to="/main-jinmin">메인</Link>
-      <div>Nav</div>
-    </>
+      <span>Nav</span>
+    </div>
   );
 };
 

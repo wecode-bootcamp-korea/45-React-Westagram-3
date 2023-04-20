@@ -3,79 +3,163 @@ import "./Main.scss";
 
 const Main = () => {
   return (
-    <>
-      Main
-      {/* // 변수
-const myNavImg = document.querySelector(`#myNavImg`); // 상단바
-const navUserImg = document.querySelector(`#navUserImg`);
-const navMyMenu = document.querySelector(`#navMyMenu`);
+    <main>
+      {/* <!-- section --> */}
+      <section>
+        <article>
+          <div class="userInfo">
+            <div>
+              <div class="userImg" />
+              <div class="userName">
+                <span>hahah_</span>
+              </div>
+            </div>
+            <div class="userMenu">
+              <span>···</span>
+            </div>
+          </div>
+          <div class="feedsImgs" />
+          <div class="feedsWork">
+            <div class="wokrs">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
+                alt="heart"
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
+                alt="heart"
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
+                alt="heart"
+              />
+            </div>
+            <div class="bookmark">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
+                alt="heart"
+              />
+            </div>
+          </div>
+          <div class="whoLike">
+            <div class="whoIs">
+              <div class="userImg" />
+              <div>너당 외 100명이 좋아합니다</div>
+            </div>
+          </div>
+          {/* <!-- section > reply --> */}
+          <div id="replies" class="replies">
+            <div class="replyBox">
+              <div class="userName">1</div>
+              <div class="userTalk">하나</div>
+              <div class="delReply">x</div>
+            </div>
+            <div class="replyBox">
+              <div class="userName">2</div>
+              <div class="userTalk">둘</div>
+              <div class="delReply">x</div>
+            </div>
+          </div>
+          <div class="typeReply">
+            {/* <!-- <form id="replyForm" action="#"> --> */}
+            <input id="inputReply" type="text" placeholder="댓글 달기..." />
+            <input id="inputReplyBtn" type="button" value="게시" />
+            {/* <!-- </form> --> */}
+            <button id="check">확인</button>
+          </div>
+        </article>
+      </section>
 
-const replies = document.querySelector(`#replies`);
-let replyBox = document.querySelectorAll(`.replyBox`);
-let delReply = document.querySelectorAll(`.delReply`);
-const inputReply = document.querySelector(`#inputReply`);
-const inputReplyBtn = document.querySelector(`#inputReplyBtn`);
+      {/* <!-- aside --> */}
+      <aside>
+        {/* <!-- aside > me --> */}
+        <div class="me">
+          <div class="myImg" />
+          <div class="myName">
+            <div class="myNickName">wecode_bootcamp</div>
+            <div class="myRealkName">WeCode | 위코드</div>
+          </div>
+        </div>
 
-// 함수
-const addReply = () => {
-  const div = document.createElement(`div`);
-  const divClass = document.createAttribute(`class`);
-  divClass.value = `replyBox`;
-  div.innerHTML += `<p>1</p>`;
-  div.setAttributeNode(divClass);
-  console.log(div);
-  if (inputReply.value.length) {
-    replies.innerHTML += `
-    <div class="replyBox">
-      <div class="userName">나다</div>
-      <div class="userTalk">${inputReply.value}</div>
-      <div class="delReply">x</div>
-    </div>
-  `;
-    inputReply.value = ``;
-  }
-};
+        {/* <!-- aside > story --> */}
+        <div class="story">
+          <div class="rightHeaders">
+            <sapn class="smallHeader">스토리</sapn>
+            <span class="seeAll">모두 보기</span>
+          </div>
+          <div class="storyMain">
+            <div class="users">
+              <div class="userState">
+                <div class="userImg" />
+                <div class="userDesc">
+                  <div class="userName">나다1</div>
+                  <div class="userPlay">16분전</div>
+                  <div class="userPlay" />
+                </div>
+              </div>
+            </div>
+            <div class="users">
+              <div class="userState">
+                <div class="userImg" />
+                <div class="userDesc">
+                  <div class="userName">나다2</div>
+                  <div class="userPlay">3시간 전</div>
+                </div>
+              </div>
+            </div>
+            <div class="users">
+              <div class="userState">
+                <div class="userImg" />
+                <div class="userDesc">
+                  <div class="userName">나다3</div>
+                  <div class="userPlay">20시간 전</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-// const addReply = () => {
-//   if (inputReply.value.length) {
-//     replies.innerHTML += `
-//     <div class="replyBox">
-//       <div class="userName">나다</div>
-//       <div class="userTalk">${inputReply.value}</div>
-//       <div class="delReply">x</div>
-//     </div>
-//   `;
-//     inputReply.value = ``;
-//   }
-// };
-
-// for (let i = 0; i < delReply.length; i++) {
-//   delReply[i].addEventListener(`click`, function () {
-//     console.log(`hi`, i);
-//   });
-// }
-
-// 실행
-navUserImg.addEventListener(`click`, () => {  // 개인 메뉴 표시
-  navMyMenu.style.display = `flex`;
-});
-
-
-document.addEventListener('mouseup', e => { // 개인 메뉴 닫기
-  !navMyMenu.contains(e.target) ? navMyMenu.style.display = 'none' : null;
-});
-
-
-
-inputReply.addEventListener(`keydown`, e => e.keyCode === 13 ? addReply() : null);  // 댓글 입력
-inputReplyBtn.addEventListener(`click`, addReply);
-
-
-
-// test
-const check = document.querySelector(`#check`);
-check.addEventListener(`click`, () => console.log(delReply)); */}
-    </>
+        {/* <!-- aside > recomendUser --> */}
+        <div class="recomendUser">
+          <div class="rightHeaders">
+            <sapn class="smallHeader">회원님을 위한 추천</sapn>
+            <span class="seeAll">모두 보기</span>
+          </div>
+          <div class="recomendUserMain">
+            <div class="users">
+              <div class="userState">
+                <div class="userImg" />
+                <div class="userDesc">
+                  <div class="userName">나추천1</div>
+                  <div class="userPlay">~외 n명이 친구이삼</div>
+                </div>
+              </div>
+              <div class="clickFollow">팔로우</div>
+            </div>
+            <div class="users">
+              <div class="userState">
+                <div class="userImg" />
+                <div class="userDesc">
+                  <div class="userName">나추천2</div>
+                  <div class="userPlay">~외 n명이 친구이삼</div>
+                </div>
+              </div>
+              <div class="clickFollow">팔로우</div>
+            </div>
+            <div class="users">
+              <div class="userState">
+                <div class="userImg" />
+                <div class="userDesc">
+                  <div class="userName">나추천3</div>
+                  <div class="userPlay">~외 n명이 친구이삼</div>
+                </div>
+              </div>
+              <div class="clickFollow">팔로우</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
   );
 };
 
