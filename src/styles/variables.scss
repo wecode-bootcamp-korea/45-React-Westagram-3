@@ -2,6 +2,6 @@ $body-white: #fafafa;
 
 @mixin flexCenter {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
