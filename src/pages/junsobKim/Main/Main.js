@@ -132,6 +132,16 @@ export const ArticleReact = () => {
   );
 };
 
+// Comment 컴포넌트
+const Comment = ({ comment, index }) => {
+  return (
+    <div key={index} className="commentItem">
+      <span className="who">Wecode_bootcamp</span> {comment}
+    </div>
+  );
+};
+
+// ArticleComment 컴포넌트
 export const ArticleComment = () => {
   // 댓글 저장할 상태(state) 만들기
   const [comments, setComments] = useState([]);
@@ -151,14 +161,13 @@ export const ArticleComment = () => {
     // 댓글 입력하는 input 요소의 상태 초기화
     setCommentText("");
   };
+
   return (
     <div className="articleComment">
       <div className="details">
         {/* 이전 댓글들을 배열로 출력하기 */}
         {comments.map((comment, index) => (
-          <div key={index} className="commentItem">
-            <span className="who">Wecode_bootcamp</span> {comment}
-          </div>
+          <Comment key={index} comment={comment} index={index} />
         ))}
         <div className="newCommentThings">
           <form onSubmit={addComment}>
