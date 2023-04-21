@@ -37,33 +37,33 @@
 }
 
 ///////////
-// .navPart {
-//   @include flexSort(space-between, none);
+.navPart {
+  @include flexSort(space-between, none);
 
-//   padding: 10px;
+  padding: 10px;
 
-//   border-bottom: 1px solid $body-white;
-//   background-color: white;
+  border-bottom: 1px solid $body-white;
+  background-color: white;
 
-//   font-family: "Lobster";
-//   font-size: 30pt;
+  font-family: "Lobster";
+  font-size: 30pt;
 
-//   .nav_part {
-//     @include flexSort(space-between, center);
+  .nav_part {
+    @include flexSort(space-between, center);
 
-//     .westagram_logo {
-//       margin-left: 20px;
-//       padding-left: 10px;
+    .westagram_logo {
+      margin-left: 20px;
+      padding-left: 10px;
 
-//       border-left: 2px solid black;
-//     }
-//   }
+      border-left: 2px solid black;
+    }
+  }
 
-//   .search {
-//     outline: none;
-//     text-align: center;
-//   }
-// }
+  .search {
+    outline: none;
+    text-align: center;
+  }
+}
 
 .mainPart {
   display: flex;

@@ -9,7 +9,7 @@ import profileIcon from "../../../assets/hyunahPark/profile.png";
 const Main = () => {
   return (
     <div className="main">
-      {/* <nav className="navPart">
+      <nav className="navPart">
         <span className="nav_part">
           <img
             alt="instagram icon"
@@ -39,7 +39,7 @@ const Main = () => {
             width="40"
           />
         </span>
-      </nav> */}
+      </nav>
 
       <main className="mainPart">
         <div className="main-feeds">
