@@ -1,20 +1,5 @@
 import React, { useState } from "react";
 import "./main.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHeart as farHeart,
-  faComment as farComment,
-  faShareSquare as farShare,
-  faBookmark as farBookmark,
-  faEllipsisH as fasEllipsis,
-  faHeart as fasHeart,
-} from "@fortawesome/free-regular-svg-icons";
-import {
-  faCompass as fasCompass,
-  faHeart as fasHeart2,
-  faUser as fasUser,
-} from "@fortawesome/free-solid-svg-icons";
-import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const Main = () => {
@@ -52,7 +37,7 @@ export const Nav = () => {
 export const NavMenus = () => {
   const navigate = useNavigate();
   const goToLogin = () => {
-    navigate("/login");
+    navigate("/login-junsob");
   };
   return (
     <div id="mainProfileThings">
@@ -89,7 +74,7 @@ export const ArticleProfiles = () => {
         </div>
       </div>
       <a className="articleViewMore" href="">
-        <FontAwesomeIcon icon={faEllipsisH} />
+        &nbsp;
       </a>
     </div>
   );
