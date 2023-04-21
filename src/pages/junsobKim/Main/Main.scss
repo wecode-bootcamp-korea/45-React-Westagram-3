@@ -159,14 +159,37 @@ body {
         flex-direction: row;
         justify-content: space-between;
         margin-left: 10px;
+        height: 20px;
 
         .reactingS {
           display: flex;
-          gap: 0px;
+          gap: 10px;
 
           .heart {
-            color: red;
+            background-image: url(../../../assets/junsobKim/icons/heart.png);
+            background-size: cover;
+            width: 20px;
+            height: auto;
           }
+          .dm {
+            background-image: url(../../../assets/junsobKim/icons/dm.png);
+            background-size: cover;
+            width: 20px;
+            height: auto;
+          }
+          .share {
+            background-image: url(../../../assets/junsobKim/icons/share.png);
+            background-size: cover;
+            width: 20px;
+            height: auto;
+          }
+        }
+        .bookmark {
+          background-image: url(../../../assets/junsobKim/icons/bookmark.png);
+          background-size: cover;
+          width: 20px;
+          height: auto;
+          margin-right: 10px;
         }
       }
 

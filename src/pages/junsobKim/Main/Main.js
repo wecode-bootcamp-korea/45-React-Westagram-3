@@ -110,19 +110,11 @@ export const ArticleReact = () => {
     <div className="articleReact">
       <div className="reacting">
         <div className="reactingS">
-          <button className="heart">
-            <FontAwesomeIcon icon={farHeart} />
-          </button>
-          <button className="mention">
-            <FontAwesomeIcon icon={farComment} />
-          </button>
-          <button className="share">
-            <FontAwesomeIcon icon={farShare} />
-          </button>
+          <button className="heart" />
+          <button className="dm" />
+          <button className="share" />
         </div>
-        <button className="bookmark">
-          <FontAwesomeIcon icon={farBookmark} />
-        </button>
+        <button className="bookmark" />
       </div>
       <div className="reactingPeople">
         <img className="reactingImg" src="images/junsobkim/peoples1.webp" />
@@ -136,7 +128,7 @@ export const ArticleReact = () => {
 const Comment = ({ comment, index }) => {
   return (
     <div key={index} className="commentItem">
-      <span className="who">Wecode_bootcamp</span> {comment}
+      <span className="who">Alice_Book</span> {comment}
     </div>
   );
 };
