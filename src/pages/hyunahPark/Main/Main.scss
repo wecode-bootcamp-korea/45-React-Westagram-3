@@ -23,12 +23,12 @@
   background-color: rgb(245, 245, 245);
 }
 
-@mixin article_ele_padding {
+@mixin articleElePadding {
   padding: 7px;
   padding-top: 0px;
 }
 
-@mixin right_profile_id {
+@mixin rightProfileId {
   display: flex;
   flex-direction: column;
   // align-items: center;
@@ -37,7 +37,7 @@
 }
 
 ///////////
-.navPart {
+.nav {
   @include flexSort(space-between, none);
 
   padding: 10px;
@@ -48,10 +48,10 @@
   font-family: "Lobster";
   font-size: 30pt;
 
-  .nav_part {
+  .navPart {
     @include flexSort(space-between, center);
 
-    .westagram_logo {
+    .westagramLogo {
       margin-left: 20px;
       padding-left: 10px;
 
@@ -85,19 +85,19 @@
       background-color: white;
 
       // 1) article head
-      .article_head {
+      .articleHead {
         @include flexSort(space-between, none);
 
         padding: 10px;
 
-        .article_profile {
+        .articleProfile {
           @include flexSort(space-between, center);
 
-          .mickey_profile_img {
+          .mickeyProfileImg {
             @include circleBorder;
           }
 
-          .article_profile_id {
+          .articleProfileId {
             @include bold;
           }
         }
@@ -106,22 +106,22 @@
       // 2) article main img
 
       // 3) article react icon
-      .article_react_icon {
+      .articleReactIcon {
         @include flexSort(space-between, center);
 
-        @include article_ele_padding();
+        @include articleElePadding();
         margin-top: 5px;
 
         & i {
           font-size: 30px;
         }
 
-        .article_react_icon_right {
+        .articleReactIconRight {
           @include flexSort(space-between, center);
 
           width: 120px;
 
-          #article_react_icon_heart {
+          #articleReactIconHeart {
             color: #ff007b;
           }
         }
@@ -129,36 +129,36 @@
 
       // 4) article like
 
-      .article_like {
+      .articleLike {
         @include flexSort(none, center);
 
-        @include article_ele_padding();
+        @include articleElePadding();
 
-        .icecream_profile_img {
+        .icecreamProfileImg {
           @include circleBorder;
         }
 
-        .article_like_profile_id {
+        .articleLikeProfileId {
           @include bold;
         }
 
-        .article_like_profile_etc {
+        .articleLikeProfileEtc {
           @include bold;
         }
       }
 
       // 5) article content
 
-      .article_content {
+      .articleContent {
         display: flex;
 
-        @include article_ele_padding();
+        @include articleElePadding();
 
-        .article_content_profile_id {
+        .articleContentProfileId {
           @include bold;
         }
 
-        .article_content_more {
+        .articleContentMore {
           @include flexSort(space-between, end);
 
           color: gray;
@@ -168,22 +168,22 @@
 
       // 6) article reply
 
-      .article_reply {
-        @include article_ele_padding();
+      .articleReply {
+        @include articleElePadding();
 
-        .article_reply_add {
+        .articleReplyAdd {
           @include flexSort(space-between, center);
         }
 
-        .article_reply_profile_id {
+        .articleReplyProfileId {
           @include bold;
         }
       }
 
       // 7) article time
 
-      .article_time {
-        @include article_ele_padding();
+      .articleTime {
+        @include articleElePadding();
 
         border-bottom: 1px solid $body-white;
 
@@ -192,13 +192,13 @@
 
       // 8) article reply input
 
-      .article_reply_input {
+      .articleReplyInput {
         @include flexSort(space-between, center);
 
-        @include article_ele_padding();
+        @include articleElePadding();
         padding-right: 3px;
 
-        .reply_txt {
+        .replyTxt {
           width: 90vw;
           height: 30px;
 
@@ -208,7 +208,7 @@
           background-color: white;
         }
 
-        .reply_button {
+        .replyButton {
           border: none;
           outline: none;
           background-color: white;
@@ -229,19 +229,19 @@
     background-color: $body-white;
 
     // 1. side profile
-    .side_profile {
+    .sideProfile {
       @include flexSort(none, center);
 
       margin-bottom: 10px;
 
-      .side_profile_img {
+      .sideProfileImg {
         @include circleBorder;
       }
 
-      .side_profile_id {
-        @include right_profile_id();
+      .sideProfileId {
+        @include rightProfileId();
 
-        .side_profile_id_name {
+        .sideProfileIdName {
           @include bold;
         }
       }
@@ -257,35 +257,35 @@
       border: 1px solid $body-white;
       background-color: white;
 
-      .story_domain {
+      .storyDomain {
         @include flexSort(space-between, center);
 
         margin-bottom: 20px;
 
-        .story_txt {
+        .storyTxt {
           color: gray;
           @include bold;
         }
 
-        .story_view_all {
+        .storyViewAll {
           @include bold;
         }
       }
 
-      .story_profile {
+      .storyProfile {
         display: flex;
         align-items: center;
 
         margin-bottom: 10px;
 
-        .story_profile_id_img {
+        .storyProfileIdImg {
           @include circleBorder;
         }
 
-        .story_profile_id {
-          @include right_profile_id();
+        .storyProfileId {
+          @include rightProfileId();
 
-          .story_profile_id_name {
+          .storyProfileIdName {
             @include bold;
           }
         }
@@ -302,34 +302,34 @@
       border: 1px solid $body-white;
       background-color: white;
 
-      .recommendation_domain {
+      .recommendationDomain {
         @include flexSort(space-between, center);
 
         margin-bottom: 20px;
 
-        .rec_txt {
+        .recTxt {
           color: gray;
           @include bold;
         }
 
-        .rec_view_all {
+        .recViewAll {
           @include bold;
         }
       }
 
-      .recommendation_profile {
+      .recommendationProfile {
         @include flexSort(none, center);
 
         margin-bottom: 10px;
 
-        .rec_profile_id_img {
+        .recProfileIdImg {
           @include circleBorder;
         }
 
-        .rec_profile_id {
-          @include right_profile_id();
+        .recProfileId {
+          @include rightProfileId();
 
-          .rec_profile_id_name {
+          .recProfileIdName {
             @include bold;
           }
         }

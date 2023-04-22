@@ -9,22 +9,22 @@ import profileIcon from "../../../assets/hyunahPark/profile.png";
 const Main = () => {
   return (
     <div className="main">
-      <nav className="navPart">
-        <span className="nav_part">
+      <nav className="nav">
+        <span className="navPart">
           <img
             alt="instagram icon"
             src={InstaIcon}
             className="instagramIcon"
             width="40"
           />
-          <span class="westagram_logo">&nbsp;westagram</span>
+          <span className="westagramLogo">&nbsp;westagram</span>
         </span>
 
-        <span className="nav_part">
+        <span className="navPart">
           <input type="text" className="search" placeholder="검색" />
         </span>
 
-        <span className="nav_part">
+        <span className="navPart">
           <img
             alt="explore"
             src={ExploreIcon}
@@ -44,15 +44,15 @@ const Main = () => {
       <main className="mainPart">
         <div className="main-feeds">
           <article className="articlePart">
-            <div className="article_head">
-              <div className="article_profile">
+            <div className="articleHead">
+              <div className="articleProfile">
                 <img
-                  className="mickey_profile_img"
-                  alt="mickey_profile"
-                  src="/images/hyunahPark/mickey_profile.jpg"
+                  className="mickeyProfileImg"
+                  alt="mickey profile"
+                  src="/images/hyunahPark/mickeyProfile.jpg"
                   width="25"
                 />
-                <span className="article_profile_id">&nbsp;hhyunah</span>
+                <span className="articleProfileId">&nbsp;hhyunah</span>
               </div>
 
               <div>
@@ -61,30 +61,27 @@ const Main = () => {
             </div>
 
             <img
-              className="article_main_img"
+              className="articleMainImg"
               alt="brunch"
               src="/images/hyunahPark/brunch.jpg"
               width="100%"
             />
 
-            <div className="article_react_icon">
-              <div className="article_react_icon_right">
-                <i
-                  className="fa-solid fa-heart"
-                  id="article_react_icon_heart"
-                />
-                <i class="fa-regular fa-comment" />
-                <i class="fa-solid fa-arrow-up-from-bracket" />
+            <div className="articleReactIcon">
+              <div className="articleReactIconRight">
+                <i className="fa-solid fa-heart" id="articleReactIconHeart" />
+                <i className="fa-regular fa-comment" />
+                <i className="fa-solid fa-arrow-up-from-bracket" />
               </div>
 
               <div>
-                <i class="fa-regular fa-bookmark" />
+                <i className="fa-regular fa-bookmark" />
               </div>
             </div>
 
-            <div className="article_like">
+            <div className="articleLike">
               <img
-                className="icecream_profile_img"
+                className="icecreamProfileImg"
                 alt="icecream"
                 src="/images/hyunahPark/icecream.jpg"
                 width="25"
@@ -92,152 +89,152 @@ const Main = () => {
 
               <span>
                 &nbsp;
-                <span className="article_like_profile_id">mickey</span>님
-                <span className="article_like_profile_etc">&nbsp;외 10명</span>
-                이 좋아합니다.
+                <span className="articleLikeProfileId">mickey</span>님
+                <span className="articleLikeProfileEtc">&nbsp;외 10명</span>이
+                좋아합니다.
               </span>
             </div>
 
-            <div className="article_content">
-              <span className="article_content_profile_id">hhyunah</span>
+            <div className="articleContent">
+              <span className="articleContentProfileId">hhyunah</span>
               &nbsp;LA에서 먹는 브런치 ♥
-              <div className="article_content_more">... 더 보기</div>
+              <div className="articleContentMore">... 더 보기</div>
             </div>
 
-            <div className="article_reply">
-              <div className="article_reply_add">
+            <div className="articleReply">
+              <div className="articleReplyAdd">
                 <div>
-                  <span className="article_reply_profile_id">mickey</span>
+                  <span className="articleReplyProfileId">mickey</span>
                   &nbsp;계란반숙
                 </div>
 
                 <div>
-                  <i class="fa-regular fa-heart" />
+                  <i className="fa-regular fa-heart" />
                 </div>
               </div>
             </div>
 
-            <div className="article_time">43분 전</div>
+            <div className="articleTime">43분 전</div>
 
-            <div className="article_reply_input">
+            <div className="articleReplyInput">
               <input
                 type="text"
-                className="reply_txt"
+                className="replyTxt"
                 placeholder="댓글 달기..."
               />
-              <input type="button" className="reply_button" value="게시" />
+              <input type="button" className="replyButton" value="게시" />
             </div>
           </article>
         </div>
 
         <div className="main-right">
-          <div className="side_profile">
+          <div className="sideProfile">
             <img
-              className="side_profile_img"
+              className="sideProfileImg"
               alt="mm"
               src="/images/hyunahPark/mm.jpg"
               width="60"
             />
 
-            <div className="side_profile_id">
-              <span className="side_profile_id_name">olive</span>
+            <div className="sideProfileId">
+              <span className="sideProfileIdName">olive</span>
               <span>Hyunah Park</span>
             </div>
           </div>
 
           <div className="story">
-            <div className="story_domain">
-              <span className="story_txt">스토리</span>
-              <span className="story_view_all">모두보기</span>
+            <div className="storyDomain">
+              <span className="storyTxt">스토리</span>
+              <span className="storyViewAll">모두보기</span>
             </div>
 
-            <div className="story_profile">
+            <div className="storyProfile">
               <img
-                className="story_profile_id_img"
+                className="storyProfileIdImg"
                 alt="icecream"
                 src="/images/hyunahPark/icecream.jpg"
                 width="50"
               />
 
-              <div className="story_profile_id">
-                <span className="story_profile_id_name">hhyunah</span>
+              <div className="storyProfileId">
+                <span className="storyProfileIdName">hhyunah</span>
                 <span>Hyunah Park</span>
               </div>
             </div>
 
-            <div className="story_profile">
+            <div className="storyProfile">
               <img
-                className="story_profile_id_img"
+                className="storyProfileIdImg"
                 alt="icecream"
                 src="/images/hyunahPark/icecream.jpg"
                 width="50"
               />
 
-              <div className="story_profile_id">
-                <span className="story_profile_id_name">hhyunah</span>
+              <div className="storyProfileId">
+                <span className="storyProfileIdName">hhyunah</span>
                 <span>Hyunah Park</span>
               </div>
             </div>
 
-            <div className="story_profile">
+            <div className="storyProfile">
               <img
-                className="story_profile_id_img"
+                className="storyProfileIdImg"
                 alt="icecream"
                 src="/images/hyunahPark/icecream.jpg"
                 width="50"
               />
 
-              <div className="story_profile_id">
-                <span className="story_profile_id_name">hhyunah</span>
+              <div className="storyProfileId">
+                <span className="storyProfileIdName">hhyunah</span>
                 <span>Hyunah Park</span>
               </div>
             </div>
           </div>
 
           <div className="recommendation">
-            <div className="recommendation_domain">
-              <span className="rec_txt">회원님을 위한 추천</span>
-              <span className="rec_view_all">모두보기</span>
+            <div className="recommendationDomain">
+              <span className="recTxt">회원님을 위한 추천</span>
+              <span className="recViewAll">모두보기</span>
             </div>
 
-            <div className="recommendation_profile">
+            <div className="recommendationProfile">
               <img
-                className="rec_profile_id_img"
+                className="recProfileIdImg"
                 alt="icecream"
                 src="/images/hyunahPark/icecream.jpg"
                 width="50"
               />
 
-              <div className="rec_profile_id">
-                <span className="rec_profile_id_name">hhyunah</span>
+              <div className="recProfileId">
+                <span className="recProfileIdName">hhyunah</span>
                 <span>Hyunah Park</span>
               </div>
             </div>
 
-            <div className="recommendation_profile">
+            <div className="recommendationProfile">
               <img
-                className="rec_profile_id_img"
+                className="recProfileIdImg"
                 alt="icecream"
                 src="/images/hyunahPark/icecream.jpg"
                 width="50"
               />
 
-              <div className="rec_profile_id">
-                <span className="rec_profile_id_name">hhyunah</span>
+              <div className="recProfileId">
+                <span className="recProfileIdName">hhyunah</span>
                 <span>Hyunah Park</span>
               </div>
             </div>
 
-            <div className="recommendation_profile">
+            <div className="recommendationProfile">
               <img
-                className="rec_profile_id_img"
+                className="recProfileIdImg"
                 alt="icecream"
                 src="/images/hyunahPark/icecream.jpg"
                 width="50"
               />
 
-              <div className="rec_profile_id">
-                <span className="rec_profile_id_name">hhyunah</span>
+              <div className="recProfileId">
+                <span className="recProfileIdName">hhyunah</span>
                 <span>Hyunah Park</span>
               </div>
             </div>

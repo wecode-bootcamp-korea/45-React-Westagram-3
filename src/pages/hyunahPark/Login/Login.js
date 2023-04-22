@@ -35,9 +35,7 @@ const Login = () => {
           />
         </div>
 
-        <div class="helpPart">
-          <h2 className="forget">비밀번호를 잊으셨나요?</h2>
-        </div>
+        <h2 className="forget">비밀번호를 잊으셨나요?</h2>
       </div>
     </div>
   );

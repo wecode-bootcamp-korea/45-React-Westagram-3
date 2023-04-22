@@ -17,12 +17,12 @@
 }
 /////////////////
 
-@mixin input_wh {
+@mixin inputWH {
   width: 80%;
   height: 35px;
 }
 
-@mixin input_idpw {
+@mixin inputIdPw {
   margin-right: 30px;
   margin-bottom: 7px;
   margin-left: 30px;
@@ -60,17 +60,17 @@
     }
 
     .id {
-      @include input_wh();
-      @include input_idpw();
+      @include inputWH();
+      @include inputIdPw();
     }
 
     .password {
-      @include input_wh();
-      @include input_idpw();
+      @include inputWH();
+      @include inputIdPw();
     }
 
     .button {
-      @include input_wh();
+      @include inputWH();
 
       margin-top: 10px;
 
