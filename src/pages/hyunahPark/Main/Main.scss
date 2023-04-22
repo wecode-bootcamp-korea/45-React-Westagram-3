@@ -68,8 +68,8 @@
 .mainPart {
   display: flex;
 
-  // 1. main-feeds (2. main-right)
-  .main-feeds {
+  // 1. mainFeeds (2. mainRight)
+  .mainFeeds {
     width: 60%;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -219,8 +219,8 @@
 
   //////////
 
-  // 2. main-right (1. main-feeds -> article)
-  .main-right {
+  // 2. mainRight (1. mainFeeds -> article)
+  .mainRight {
     flex-grow: 1;
     padding-top: 50px;
 

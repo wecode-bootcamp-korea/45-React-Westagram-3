@@ -42,7 +42,7 @@ const Main = () => {
       </nav>
 
       <main className="mainPart">
-        <div className="main-feeds">
+        <div className="mainFeeds">
           <article className="articlePart">
             <div className="articleHead">
               <div className="articleProfile">
@@ -127,7 +127,7 @@ const Main = () => {
           </article>
         </div>
 
-        <div className="main-right">
+        <div className="mainRight">
           <div className="sideProfile">
             <img
               className="sideProfileImg"
