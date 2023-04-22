@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [userId, setUserId] = useState("");
   const [userPw, setUserPw] = useState("");
+
+  const isValidBtn = !userId.includes("@") || userPw.length < 5;
 
   const saveUserID = e => {
     setUserId(e.target.value);
@@ -12,6 +15,10 @@ const Login = () => {
 
   const saveUserPw = e => {
     setUserPw(e.target.value);
+  };
+
+  const handleBtn = () => {
+    navigate("/main-hyunah");
   };
 
   return (
@@ -33,7 +40,14 @@ const Login = () => {
             placeholder=" 비밀번호"
             onChange={saveUserPw}
           />
-          <input className="button" type="button" value="로그인" />
+          <button
+            className="button"
+            onClick={handleBtn}
+            disabled={isValidBtn}
+            style={{ backgroundColor: isValidBtn ? "#9cd3f8" : "#4cb5f9" }}
+          >
+            로그인
+          </button>
         </div>
 
         <h2 className="forget">비밀번호를 잊으셨나요?</h2>
