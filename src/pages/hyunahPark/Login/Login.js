@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
-import { useNavigate } from "react-router-dom";
-
 const Login = () => {
-  const navigate = useNavigate();
+  const [userId, setUserId] = useState("");
+  const [userPw, setUserPw] = useState("");
 
-  const handleButton = () => {
-    navigate("/main-hyunah");
+  const saveUserID = e => {
+    setUserId(e.target.value);
+  };
+
+  const saveUserPw = e => {
+    setUserPw(e.target.value);
   };
 
   return (
@@ -20,19 +24,16 @@ const Login = () => {
             className="id"
             type="text"
             placeholder=" 전화번호, 사용자 이름 또는 이메일"
+            onChange={saveUserID}
           />
           <input
             className="password"
             type="password"
             required
             placeholder=" 비밀번호"
+            onChange={saveUserPw}
           />
-          <input
-            className="button"
-            type="button"
-            value="로그인"
-            onClick={handleButton}
-          />
+          <input className="button" type="button" value="로그인" />
         </div>
 
         <h2 className="forget">비밀번호를 잊으셨나요?</h2>
