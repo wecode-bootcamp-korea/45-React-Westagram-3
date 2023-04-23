@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Main.scss";
 
 import InstaIcon from "../../../assets/hyunahPark/instaicon.png";
@@ -6,7 +6,33 @@ import ExploreIcon from "../../../assets/hyunahPark/explore.png";
 import heartIcon from "../../../assets/hyunahPark/heart.png";
 import profileIcon from "../../../assets/hyunahPark/profile.png";
 
+const USERNAME = "olive";
+
 const Main = () => {
+  const [commentArr, setCommentArr] = useState([]);
+  const [inputTxt, setInputTxt] = useState("");
+
+  const addComment = () => {
+    setCommentArr([...commentArr, inputTxt]);
+    setInputTxt("");
+  };
+
+  const handleInput = e => {
+    setInputTxt(e.target.value);
+  };
+
+  const handleEnter = e => {
+    if (e.key === "Enter" && inputTxt) {
+      addComment();
+    }
+  };
+
+  const handleBtn = () => {
+    if (inputTxt) {
+      addComment();
+    }
+  };
+
   return (
     <div className="main">
       <nav className="nav">
@@ -105,13 +131,27 @@ const Main = () => {
               <div className="articleReplyAdd">
                 <div>
                   <span className="articleReplyProfileId">mickey</span>
-                  &nbsp;계란반숙
+                  <span className="articleReplyTxt">&nbsp;계란반숙</span>
                 </div>
 
                 <div>
                   <i className="fa-regular fa-heart" />
                 </div>
               </div>
+
+              {/* 댓글 추가 */}
+              {commentArr.map((commentTxt, index) => (
+                <div key={index} className="articleReplyAdd">
+                  <div>
+                    <span className="articleReplyProfileId">{USERNAME}</span>
+                    <span className="articleReplyTxt">&nbsp;{commentTxt}</span>
+                  </div>
+                  <div>
+                    <i className="fa-regular fa-heart" />
+                  </div>
+                </div>
+              ))}
+              {/* 댓글 추가 / */}
             </div>
 
             <div className="articleTime">43분 전</div>
@@ -121,8 +161,13 @@ const Main = () => {
                 type="text"
                 className="replyTxt"
                 placeholder="댓글 달기..."
+                onChange={handleInput}
+                onKeyUp={handleEnter}
+                value={inputTxt}
               />
-              <input type="button" className="replyButton" value="게시" />
+              <button className="replyButton" onClick={handleBtn}>
+                게시
+              </button>
             </div>
           </article>
         </div>
@@ -137,7 +182,7 @@ const Main = () => {
             />
 
             <div className="sideProfileId">
-              <span className="sideProfileIdName">olive</span>
+              <span className="sideProfileIdName">{USERNAME}</span>
               <span>Hyunah Park</span>
             </div>
           </div>

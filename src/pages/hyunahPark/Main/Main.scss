@@ -169,9 +169,8 @@
       // 6) article reply
 
       .articleReply {
-        @include articleElePadding();
-
         .articleReplyAdd {
+          @include articleElePadding();
           @include flexSort(space-between, center);
         }
 
@@ -199,7 +198,7 @@
         padding-right: 3px;
 
         .replyTxt {
-          width: 90vw;
+          width: 440px;
           height: 30px;
 
           border: none;
