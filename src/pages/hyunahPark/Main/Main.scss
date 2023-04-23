@@ -168,17 +168,6 @@
 
       // 6) article reply
 
-      .articleReply {
-        .articleReplyAdd {
-          @include articleElePadding();
-          @include flexSort(space-between, center);
-        }
-
-        .articleReplyProfileId {
-          @include bold;
-        }
-      }
-
       // 7) article time
 
       .articleTime {
@@ -198,7 +187,7 @@
         padding-right: 3px;
 
         .replyTxt {
-          width: 440px;
+          width: 90%;
           height: 30px;
 
           border: none;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Comment from "./Comment";
 import "./Main.scss";
 
 import InstaIcon from "../../../assets/hyunahPark/instaicon.png";
@@ -128,28 +129,15 @@ const Main = () => {
             </div>
 
             <div className="articleReply">
-              <div className="articleReplyAdd">
-                <div>
-                  <span className="articleReplyProfileId">mickey</span>
-                  <span className="articleReplyTxt">&nbsp;계란반숙</span>
-                </div>
-
-                <div>
-                  <i className="fa-regular fa-heart" />
-                </div>
-              </div>
+              <Comment key={0} USERNAME="mickey" commentTxt="계란반숙" />
 
               {/* 댓글 추가 */}
               {commentArr.map((commentTxt, index) => (
-                <div key={index} className="articleReplyAdd">
-                  <div>
-                    <span className="articleReplyProfileId">{USERNAME}</span>
-                    <span className="articleReplyTxt">&nbsp;{commentTxt}</span>
-                  </div>
-                  <div>
-                    <i className="fa-regular fa-heart" />
-                  </div>
-                </div>
+                <Comment
+                  key={index}
+                  USERNAME={USERNAME}
+                  commentTxt={commentTxt}
+                />
               ))}
               {/* 댓글 추가 / */}
             </div>
