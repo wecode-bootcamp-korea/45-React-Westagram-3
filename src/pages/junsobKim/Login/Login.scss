@@ -1,4 +1,4 @@
-body {
+.mainPage {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@ body {
   background-color: #fafafa;
 }
 
-#mainPage {
+.mainContents {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -16,14 +16,14 @@ body {
   height: 500px;
   border: 1px solid rgb(128, 128, 128);
 
-  #titleLogin {
+  .titleLogin {
     margin-top: 20px;
     margin-bottom: 50px;
     font-family: "Lobster", cursive;
     font-size: 60px;
   }
 
-  #inputsLogin {
+  .inputsLogin {
     display: flex;
     flex-direction: column;
     width: 300px;
@@ -43,35 +43,31 @@ body {
     }
   }
 
-  #submitLogin {
+  .submitLogin #loginButton {
     width: 300px;
+    margin-top: 15px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 3px;
+    background-color: #b2dffc;
+    color: aliceblue;
+    cursor: pointer;
 
-    #loginButton {
-      width: 100%;
-      margin-top: 15px;
-      padding: 10px;
-      border: 0px;
-      border-radius: 3px;
-      background-color: #b2dffc;
-      color: aliceblue;
-      cursor: pointer;
+    &:hover {
+      background-color: #63b5f9;
+    }
 
-      &:hover {
-        background-color: #63b5f9;
-      }
+    &.active {
+      background-color: #4ea0f4;
+    }
 
-      &.active {
-        background-color: #4ea0f4;
-      }
-
-      &:disabled {
-        background-color: #a9a9a9;
-        cursor: not-allowed;
-      }
+    &:disabled {
+      background-color: #a9a9a9;
+      cursor: not-allowed;
     }
   }
 
-  #forgotLogin {
+  .forgotLogin {
     position: absolute;
     bottom: 30px;
     color: #546a98;

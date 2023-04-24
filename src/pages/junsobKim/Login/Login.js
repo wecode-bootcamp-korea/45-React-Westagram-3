@@ -24,39 +24,39 @@ const LoginPage = () => {
   const isLoginButtonDisabled = !isUserIdValid || !isPasswordValid;
 
   return (
-    <div id="mainPage">
-      <div id="titleLogin">Instagram</div>
-      <div id="inputsLogin">
-        <input
-          id="contactLogin"
-          className="userIdInput"
-          type="text"
-          placeholder="전화번호, 사용자 이름 또는 이메일"
-          value={userId}
-          onChange={handleUserIdChange}
-        />
-        <input
-          id="passwordLogin"
-          className="passwordInput"
-          type="password "
-          placeholder="비밀번호"
-          value={password}
-          onChange={handlePasswordChange}
-        />
+    <div className="mainPage">
+      <div className="mainContents">
+        <div className="titleLogin">Instagram</div>
+        <div className="inputsLogin">
+          <input
+            className="userIdInput"
+            type="text"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+            value={userId}
+            onChange={handleUserIdChange}
+          />
+          <input
+            className="passwordInput"
+            type="password "
+            placeholder="비밀번호"
+            value={password}
+            onChange={handlePasswordChange}
+          />
+        </div>
+        <div className="submitLogin">
+          <button
+            id="loginButton"
+            onClick={goToMain}
+            disabled={isLoginButtonDisabled}
+            className={isLoginButtonDisabled ? "" : "active"}
+          >
+            로그인
+          </button>
+        </div>
+        <a href="" className="forgotLogin">
+          비밀번호를 잊으셨나요?
+        </a>
       </div>
-      <div id="submitLogin">
-        <button
-          id="loginButton"
-          onClick={goToMain}
-          disabled={isLoginButtonDisabled}
-          className={isLoginButtonDisabled ? "" : "active"}
-        >
-          로그인
-        </button>
-      </div>
-      <a href="" id="forgotLogin">
-        비밀번호를 잊으셨나요?
-      </a>
     </div>
   );
 };
