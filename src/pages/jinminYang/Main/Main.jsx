@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Main.scss";
 
 const Main = () => {
+  // 변수
+  const [id, setId] = useState(1);
+  const [comment, setComment] = useState(``);
+  const [REPLY, setREPLY] = useState([
+    { id: 0, user: `하이`, comment: `ㅋㅋ` },
+  ]);
+
+  // 함수
+  const replyInput = e => {
+    e.preventDefault();
+    setComment(e.target.value);
+  };
+
+  const replyButton = () => {
+    if (comment.length) {
+      REPLY.push({ id, user: `메롱${id}`, comment });
+      setREPLY(REPLY);
+      setId(id => ++id);
+      setComment(``);
+    } else {
+      alert(`댓글을 입력하세요ㅎ`);
+    }
+  };
+
+  // 출력
   return (
     <div className="main">
       {/* <!-- section --> */}
@@ -47,25 +72,28 @@ const Main = () => {
               <div>너당 외 100명이 좋아합니다</div>
             </div>
           </div>
-          {/* <!-- section > reply --> */}
-          <div id="replies" class="replies">
-            <div class="replyBox">
-              <div class="userName">1</div>
-              <div class="userTalk">하나</div>
-              <div class="delReply">x</div>
-            </div>
-            <div class="replyBox">
-              <div class="userName">2</div>
-              <div class="userTalk">둘</div>
-              <div class="delReply">x</div>
-            </div>
-          </div>
-          <div class="typeReply">
-            {/* <!-- <form id="replyForm" action="#"> --> */}
-            <input id="inputReply" type="text" placeholder="댓글 달기..." />
-            <input id="inputReplyBtn" type="button" value="게시" />
-            {/* <!-- </form> --> */}
-            <button id="check">확인</button>
+
+          {/* reply */}
+          <div>
+            {/* reply list */}
+            <ul>
+              {REPLY.map(reply => {
+                return (
+                  <li key={reply.id}>
+                    {reply.user}: {reply.comment}
+                  </li>
+                );
+              })}
+            </ul>
+            {/* input reply */}
+            <form onSubmit={e => e.preventDefault()}>
+              <input
+                type="text"
+                value={comment}
+                onChange={e => replyInput(e)}
+              />
+              <button onClick={() => replyButton()}>게시</button>
+            </form>
           </div>
         </article>
       </section>
