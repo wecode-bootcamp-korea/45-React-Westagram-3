@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Reply from "./components/Reply";
 import "./Main.scss";
 
 const Main = () => {
@@ -77,13 +78,9 @@ const Main = () => {
           <div>
             {/* reply list */}
             <ul>
-              {REPLY.map(reply => {
-                return (
-                  <li key={reply.id}>
-                    {reply.user}: {reply.comment}
-                  </li>
-                );
-              })}
+              {REPLY.map(reply => (
+                <Reply key={reply.id} reply={reply} />
+              ))}
             </ul>
             {/* input reply */}
             <form onSubmit={e => e.preventDefault()}>
