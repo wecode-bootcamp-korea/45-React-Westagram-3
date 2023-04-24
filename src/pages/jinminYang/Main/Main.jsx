@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Reply from "./components/Reply";
 import "./Main.scss";
+import { FOOTER_INFO_LIST } from "./components/FOOTER_INFO_LIST";
 
 const Main = () => {
   // 변수
@@ -33,20 +34,20 @@ const Main = () => {
       {/* <!-- section --> */}
       <section>
         <article>
-          <div class="userInfo">
+          <div className="userInfo">
             <div>
-              <div class="userImg" />
-              <div class="userName">
+              <div className="userImg" />
+              <div className="userName">
                 <span>hahah_</span>
               </div>
             </div>
-            <div class="userMenu">
+            <div className="userMenu">
               <span>···</span>
             </div>
           </div>
-          <div class="feedsImgs" />
-          <div class="feedsWork">
-            <div class="wokrs">
+          <div className="feedsImgs" />
+          <div className="feedsWork">
+            <div className="wokrs">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
                 alt="heart"
@@ -60,16 +61,16 @@ const Main = () => {
                 alt="heart"
               />
             </div>
-            <div class="bookmark">
+            <div className="bookmark">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
                 alt="heart"
               />
             </div>
           </div>
-          <div class="whoLike">
-            <div class="whoIs">
-              <div class="userImg" />
+          <div className="whoLike">
+            <div className="whoIs">
+              <div className="userImg" />
               <div>너당 외 100명이 좋아합니다</div>
             </div>
           </div>
@@ -98,46 +99,46 @@ const Main = () => {
       {/* <!-- aside --> */}
       <aside>
         {/* <!-- aside > me --> */}
-        <div class="me">
-          <div class="myImg" />
-          <div class="myName">
-            <div class="myNickName">wecode_bootcamp</div>
-            <div class="myRealkName">WeCode | 위코드</div>
+        <div className="me">
+          <div className="myImg" />
+          <div className="myName">
+            <div className="myNickName">wecode_bootcamp</div>
+            <div className="myRealkName">WeCode | 위코드</div>
           </div>
         </div>
 
         {/* <!-- aside > story --> */}
-        <div class="story">
-          <div class="rightHeaders">
-            <sapn class="smallHeader">스토리</sapn>
-            <span class="seeAll">모두 보기</span>
+        <div className="story">
+          <div className="rightHeaders">
+            <span className="smallHeader">스토리</span>
+            <span className="seeAll">모두 보기</span>
           </div>
-          <div class="storyMain">
-            <div class="users">
-              <div class="userState">
-                <div class="userImg" />
-                <div class="userDesc">
-                  <div class="userName">나다1</div>
-                  <div class="userPlay">16분전</div>
-                  <div class="userPlay" />
+          <div className="storyMain">
+            <div className="users">
+              <div className="userState">
+                <div className="userImg" />
+                <div className="userDesc">
+                  <div className="userName">나다1</div>
+                  <div className="userPlay">16분전</div>
+                  <div className="userPlay" />
                 </div>
               </div>
             </div>
-            <div class="users">
-              <div class="userState">
-                <div class="userImg" />
-                <div class="userDesc">
-                  <div class="userName">나다2</div>
-                  <div class="userPlay">3시간 전</div>
+            <div className="users">
+              <div className="userState">
+                <div className="userImg" />
+                <div className="userDesc">
+                  <div className="userName">나다2</div>
+                  <div className="userPlay">3시간 전</div>
                 </div>
               </div>
             </div>
-            <div class="users">
-              <div class="userState">
-                <div class="userImg" />
-                <div class="userDesc">
-                  <div class="userName">나다3</div>
-                  <div class="userPlay">20시간 전</div>
+            <div className="users">
+              <div className="userState">
+                <div className="userImg" />
+                <div className="userDesc">
+                  <div className="userName">나다3</div>
+                  <div className="userPlay">20시간 전</div>
                 </div>
               </div>
             </div>
@@ -145,45 +146,55 @@ const Main = () => {
         </div>
 
         {/* <!-- aside > recomendUser --> */}
-        <div class="recomendUser">
-          <div class="rightHeaders">
-            <sapn class="smallHeader">회원님을 위한 추천</sapn>
-            <span class="seeAll">모두 보기</span>
+        <div className="recomendUser">
+          <div className="rightHeaders">
+            <span className="smallHeader">회원님을 위한 추천</span>
+            <span className="seeAll">모두 보기</span>
           </div>
-          <div class="recomendUserMain">
-            <div class="users">
-              <div class="userState">
-                <div class="userImg" />
-                <div class="userDesc">
-                  <div class="userName">나추천1</div>
-                  <div class="userPlay">~외 n명이 친구이삼</div>
+          <div className="recomendUserMain">
+            <div className="users">
+              <div className="userState">
+                <div className="userImg" />
+                <div className="userDesc">
+                  <div className="userName">나추천1</div>
+                  <div className="userPlay">~외 n명이 친구이심</div>
                 </div>
               </div>
-              <div class="clickFollow">팔로우</div>
+              <div className="clickFollow">팔로우</div>
             </div>
-            <div class="users">
-              <div class="userState">
-                <div class="userImg" />
-                <div class="userDesc">
-                  <div class="userName">나추천2</div>
-                  <div class="userPlay">~외 n명이 친구이삼</div>
+            <div className="users">
+              <div className="userState">
+                <div className="userImg" />
+                <div className="userDesc">
+                  <div className="userName">나추천2</div>
+                  <div className="userPlay">~외 n명이 친구이심</div>
                 </div>
               </div>
-              <div class="clickFollow">팔로우</div>
+              <div className="clickFollow">팔로우</div>
             </div>
-            <div class="users">
-              <div class="userState">
-                <div class="userImg" />
-                <div class="userDesc">
-                  <div class="userName">나추천3</div>
-                  <div class="userPlay">~외 n명이 친구이삼</div>
+            <div className="users">
+              <div className="userState">
+                <div className="userImg" />
+                <div className="userDesc">
+                  <div className="userName">나추천3</div>
+                  <div className="userPlay">~외 n명이 친구이심</div>
                 </div>
               </div>
-              <div class="clickFollow">팔로우</div>
+              <div className="clickFollow">팔로우</div>
             </div>
           </div>
         </div>
       </aside>
+
+      {/* etc. */}
+      <footer>
+        <ul>
+          <li>소개</li>
+          {FOOTER_INFO_LIST.map(item => (
+            <li key={item.id}>{"\u00A0· " + item.menu}</li>
+          ))}
+        </ul>
+      </footer>
     </div>
   );
 };
