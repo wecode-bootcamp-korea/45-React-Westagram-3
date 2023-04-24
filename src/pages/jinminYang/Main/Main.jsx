@@ -3,7 +3,7 @@ import "./Main.scss";
 
 const Main = () => {
   return (
-    <main>
+    <div className="main">
       {/* <!-- section --> */}
       <section>
         <article>
@@ -159,7 +159,7 @@ const Main = () => {
           </div>
         </div>
       </aside>
-    </main>
+    </div>
   );
 };
 

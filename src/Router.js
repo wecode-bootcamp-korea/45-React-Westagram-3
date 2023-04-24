@@ -13,6 +13,7 @@ import MainHyunah from "./pages/hyunahPark/Main/Main";
 import MainJinmin from "./pages/jinminYang/Main/Main";
 import LoginJinmin from "./pages/jinminYang/Login/Login";
 import Nav from "./components/Nav/Nav";
+import Reply from "./pages/jinminYang/components/Reply";
 
 const Router = () => {
   return (
@@ -32,6 +33,7 @@ const Router = () => {
         {/* 양진민님의 route */}
         <Route path="/login-jinmin" element={<LoginJinmin />} />
         <Route path="/main-jinmin" element={<MainJinmin />} />
+        <Route path="/test-jinmin" element={<Reply />} />
 
         <Route path="*" element="없는 페이지예용~" />
       </Routes>

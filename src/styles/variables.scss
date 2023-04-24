@@ -1,7 +1,12 @@
 $body-white: #fafafa;
+$check-line: 1px solid red;
 
 @mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin marginCenter($tb) {
+  margin: $tb + px auto;
 }

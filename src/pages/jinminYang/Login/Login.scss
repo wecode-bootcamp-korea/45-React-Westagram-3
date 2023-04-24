@@ -1,14 +1,4 @@
-$border: 1px solid red;
-
-@mixin marginCenter($tb) {
-  margin: $tb + px auto;
-}
-
-@mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import '/src/styles/variables';
 
 body {
   background-color: #fafafa;
@@ -47,10 +37,17 @@ body {
       height: 40px;
       margin: 10px auto;
       border: none;
-      background-color: #c4e1fb;
       color: white;
       font-size: 18px;
       font-weight: bold;
+    }
+
+    .btnColorFalse {
+      background-color: #c4e1fb;
+    }
+
+    .btnColorTrue {
+      background-color: #1083eb;
     }
   }
 
