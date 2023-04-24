@@ -1,22 +1,10 @@
-@mixin flexSort($justify, $alignItemts) {
-  display: flex;
-  align-items: $alignItemts;
-  justify-content: $justify;
-}
-
-@mixin articleElePadding {
-  padding: 7px;
-  padding-top: 0px;
-}
-
-@mixin bold {
-  font-weight: bold;
-}
+@import "../mixin";
 
 .comment {
   .articleReplyAdd {
-    @include articleElePadding();
     @include flexSort(space-between, center);
+    padding: 7px;
+    padding-top: 0px;
   }
 
   .articleReplyProfileId {

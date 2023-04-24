@@ -8,6 +8,7 @@ const Login = () => {
   const [userPw, setUserPw] = useState("");
 
   const isValidBtn = !userId.includes("@") || userPw.length < 5;
+  const btnMode = isValidBtn ? "notValid" : "valid";
 
   const saveUserID = e => {
     setUserId(e.target.value);
@@ -41,10 +42,9 @@ const Login = () => {
             onChange={saveUserPw}
           />
           <button
-            className="button"
+            className={`button ${btnMode}`}
             onClick={handleBtn}
             disabled={isValidBtn}
-            style={{ backgroundColor: isValidBtn ? "#9cd3f8" : "#4cb5f9" }}
           >
             로그인
           </button>

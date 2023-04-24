@@ -1,26 +1,6 @@
-// @import '../../../styles/mixin.scss'
+@import "../../../assets/hyunahPark/font.css"; //for 'Lobster-Regular' font
+@import "../mixin";
 @import "../../../styles/variables";
-
-/////////////////
-@mixin flexSort($justify, $alignItemts) {
-  display: flex;
-  align-items: $alignItemts;
-  justify-content: $justify;
-}
-
-@mixin circleBorder {
-  border-radius: 70%;
-}
-
-@mixin bold {
-  font-weight: bold;
-}
-/////////////////
-
-@mixin inputWH {
-  width: 80%;
-  height: 35px;
-}
 
 @mixin inputIdPw {
   margin-right: 30px;
@@ -34,6 +14,15 @@
   background-color: $body-white;
 
   font-size: 15px;
+}
+
+@mixin btnMode {
+  &.notValid {
+    background-color: #9cd3f8;
+  }
+  &.valid {
+    background-color: #4cb5f9;
+  }
 }
 
 //body
@@ -54,30 +43,35 @@
     .logo {
       margin: 50px;
 
-      font-family: "Lobster";
+      font-family: "Lobster-Regular";
       font-size: 350%;
       font-weight: lighter;
     }
 
     .id {
-      @include inputWH();
+      width: 80%;
+      height: 35px;
+
       @include inputIdPw();
     }
 
     .password {
-      @include inputWH();
+      width: 80%;
+      height: 35px;
+
       @include inputIdPw();
     }
 
     .button {
-      @include inputWH();
+      @include btnMode;
+
+      width: 80%;
+      height: 35px;
 
       margin-top: 10px;
 
       border: none;
       border-radius: 5px;
-
-      background-color: #9cd3f8;
 
       color: white;
       text-align: center;

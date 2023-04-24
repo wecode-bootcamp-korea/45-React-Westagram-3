@@ -1,27 +1,5 @@
-// @import '../../../styles/mixin.scss'
+@import "../mixin";
 @import "../../../styles/variables";
-
-/////////////////
-@mixin flexSort($justify, $alignItemts) {
-  display: flex;
-  align-items: $alignItemts;
-  justify-content: $justify;
-}
-
-@mixin circleBorder {
-  border-radius: 70%;
-}
-
-@mixin bold {
-  font-weight: bold;
-}
-/////////////////
-
-//body
-.main {
-  padding: 0%;
-  background-color: rgb(245, 245, 245);
-}
 
 @mixin articleElePadding {
   padding: 7px;
@@ -36,7 +14,14 @@
   padding-left: 10px;
 }
 
+//body
+.main {
+  padding: 0%;
+  background-color: rgb(245, 245, 245);
+}
+
 ///////////
+
 .nav {
   @include flexSort(space-between, none);
 
