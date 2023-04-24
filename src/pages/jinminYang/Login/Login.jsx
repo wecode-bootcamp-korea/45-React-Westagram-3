@@ -16,7 +16,10 @@ const Login = () => {
     setPw(e.target.value);
   };
 
-  const blockRefresh = e => e.preventDefault();
+  const blockRefresh = e => {
+    alert(`전송`);
+    e.preventDefault();
+  };
 
   // 출력
   return (
@@ -24,7 +27,7 @@ const Login = () => {
       <div className="compNameDiv">
         <span className="compName">westagram</span>
       </div>
-      <form onClick={e => blockRefresh(e)}>
+      <form>
         <input
           className="id"
           type="text"
@@ -38,7 +41,9 @@ const Login = () => {
           onChange={saveUserPw}
         />
         {id.includes(`@`) && pw.length >= 5 ? (
-          <button className="btnColorTrue">로그인</button>
+          <button className="btnColorTrue" onClick={e => blockRefresh(e)}>
+            로그인
+          </button>
         ) : (
           <button className="btnColorFalse" disabled>
             로그인
