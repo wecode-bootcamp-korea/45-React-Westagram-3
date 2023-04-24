@@ -1,0 +1,116 @@
+.rightSection {
+  .whosPage {
+    display: flex;
+    flex-direction: row;
+
+    .myImg {
+      width: 45px;
+      height: 45px;
+      margin: 10px;
+      margin-left: 0px;
+      border-radius: 50%;
+    }
+
+    .myDetail {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+    }
+  }
+
+  .story {
+    border: 0.5px solid rgb(138, 138, 138);
+
+    .storyTitles {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 6px 10px;
+      font-size: 13px;
+
+      .storyTitle1 {
+        color: rgb(98, 98, 98);
+      }
+
+      .storyTitle2 {
+        font-weight: bold;
+      }
+    }
+
+    .storyMembers {
+      display: flex;
+      flex-direction: column;
+
+      .LineStory {
+        display: flex;
+        flex-direction: row;
+
+        .storyPeo {
+          width: 25px;
+          height: 25px;
+          margin: 5px 10px;
+          border-radius: 50%;
+        }
+
+        .LineBeforeT {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .recomend {
+    margin-top: 10px;
+    border: 0.5px solid rgb(138, 138, 138);
+
+    .recomendTitles {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 10px;
+      font-size: 13px;
+
+      .recomendTitle1 {
+        color: rgb(98, 98, 98);
+      }
+
+      .recomendTitle2 {
+        font-weight: bold;
+      }
+    }
+
+    .recomendWho {
+      .LineRecomend {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+        color: rgb(128, 128, 128);
+        font-size: 13px;
+
+        .recomendPC {
+          display: flex;
+          flex-direction: row;
+
+          .storyPeo {
+            width: 25px;
+            height: 25px;
+            margin: 5px 10px;
+            border-radius: 50%;
+          }
+        }
+
+        .follow {
+          color: blue;
+        }
+      }
+    }
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  .companyD {
+    margin: 10px auto;
+    color: rgb(138, 138, 138);
+    font-size: 10px;
+  }
+}

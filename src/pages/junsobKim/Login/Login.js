@@ -38,7 +38,7 @@ const LoginPage = () => {
         <input
           id="passwordLogin"
           className="passwordInput"
-          type="password"
+          type="password "
           placeholder="비밀번호"
           value={password}
           onChange={handlePasswordChange}
