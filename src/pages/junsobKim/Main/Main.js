@@ -1,8 +1,8 @@
 import React from "react";
-import "./Main.scss";
 import { Nav_kim } from "./Nav_kim";
 import { LeftArticle_kim } from "./LeftArticle_kim";
 import { RightSection_kim } from "./RightSection_kim";
+import "./Main.scss";
 
 const Main = () => {
   return (
