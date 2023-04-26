@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "imgArticleProfile": "/images/junsobKim/wecode_logo.png",
+    "txtArticleProfile": "Wecode_bootcamp",
+    "txtArticleProfileS": "weCode-위코드",
+    "articleImg": "images/junsobkim/first_article.jpeg",
+    "articleImgAlt": "first_article",
+    "reactingImg": "images/junsobkim/peoples8.jpeg",
+    "whoLike": "Alice_Book"
+  },
+  {
+    "id": 2,
+    "imgArticleProfile": "/images/junsobKim/peoples1.webp",
+    "txtArticleProfile": "Arirang",
+    "txtArticleProfileS": "Arirang-아리랑",
+    "articleImg": "images/junsobkim/peoples2.webp",
+    "articleImgAlt": "second_article",
+    "reactingImg": "images/junsobkim/peoples7.webp",
+    "whoLike": "Arariyo"
+  },
+  {
+    "id": 3,
+    "imgArticleProfile": "/images/junsobKim/peoples3.webp",
+    "txtArticleProfile": "Daehanminguk",
+    "txtArticleProfileS": "Daehan-대한민국",
+    "articleImg": "images/junsobkim/peoples4.webp",
+    "articleImgAlt": "third_article",
+    "reactingImg": "images/junsobkim/peoples6.webp",
+    "whoLike": "Minkuk"
+  }
+]

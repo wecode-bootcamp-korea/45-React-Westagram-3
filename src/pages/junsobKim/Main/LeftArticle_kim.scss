@@ -21,9 +21,9 @@
         height: 35px;
         margin-left: 10px;
         border-radius: 50%;
-        background-image: url("../../../assets/junsobKim/wecode_logo.png");
         background-position: center;
         background-size: cover;
+        object-fit: cover;
       }
 
       .txtArticleProfile {

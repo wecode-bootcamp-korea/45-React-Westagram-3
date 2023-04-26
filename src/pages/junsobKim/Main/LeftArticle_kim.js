@@ -1,28 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./LeftArticle_kim.scss";
 
 export const LeftArticle_kim = () => {
+  const [feeds, setFeeds] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/feedsData_junsob.json")
+      .then((response) => response.json())
+      .then((data) => setFeeds(data));
+  }, []);
+
   return (
     <div className="leftArticle_kim">
-      <ArticleProfiles />
-      <ArticlePic />
-      <ArticleReact />
-      <ArticleComment />
+      {feeds.map((feed) => (
+        <React.Fragment key={feed.id}>
+          <ArticleProfiles
+            imgArticleProfile={feed.imgArticleProfile}
+            txtArticleProfile={feed.txtArticleProfile}
+            txtArticleProfileS={feed.txtArticleProfileS}
+          />
+          <ArticlePic
+            articleImg={feed.articleImg}
+            articleImgAlt={feed.articleImgAlt}
+          />
+          <ArticleReact reactingImg={feed.reactingImg} whoLike={feed.whoLike} />
+          <ArticleComment />
+        </React.Fragment>
+      ))}
     </div>
   );
 };
 
-export const ArticleProfiles = () => {
+export const ArticleProfiles = ({
+  imgArticleProfile,
+  txtArticleProfile,
+  txtArticleProfileS,
+}) => {
   return (
     <div className="articleProfiles">
       <div className="articleP">
-        <a className="imgArticleProfile" href=""></a>
+        <img className="imgArticleProfile" src={imgArticleProfile} />
         <div className="txtArticleProfileThings">
           <a className="txtArticleProfile" href="">
-            Wecode_bootcamp
+            {txtArticleProfile}
           </a>
           <a className="txtArticleProfileS" href="">
-            WeCode-위코드
+            {txtArticleProfileS}
           </a>
         </div>
       </div>
@@ -33,17 +56,11 @@ export const ArticleProfiles = () => {
   );
 };
 
-export const ArticlePic = () => {
-  return (
-    <img
-      className="articleImg"
-      src="images/junsobkim/first_article.jpeg"
-      alt="first_article"
-    />
-  );
+export const ArticlePic = ({ articleImg, articleImgAlt }) => {
+  return <img className="articleImg" src={articleImg} alt={articleImgAlt} />;
 };
 
-export const ArticleReact = () => {
+export const ArticleReact = ({ reactingImg, whoLike }) => {
   return (
     <div className="articleReact">
       <div className="reacting">
@@ -55,8 +72,8 @@ export const ArticleReact = () => {
         <button className="bookmark" />
       </div>
       <div className="reactingPeople">
-        <img className="reactingImg" src="images/junsobkim/peoples1.webp" />
-        <div className="whoLike">Alice_Book님 외 4명이 좋아합니다</div>
+        <img className="reactingImg" src={reactingImg} />
+        <div className="whoLike">{whoLike}님 외 4명이 좋아합니다</div>
       </div>
     </div>
   );
