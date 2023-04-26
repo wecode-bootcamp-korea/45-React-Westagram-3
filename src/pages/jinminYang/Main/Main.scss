@@ -5,94 +5,15 @@
   justify-content: space-between;
   max-width: 1280px;
   margin: 100px auto;
-  // border: $check-line;
   background-color: $backgroundColor;
 
   .feeds {
-    width: 800px;
-    border: $borderColor;
-    background-color: $backgroundColorDiv;
-    .feed {
-      // border: $borderColor;
-
-      .userInfo {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px;
-
-        .userSimpleProfile {
-          display: flex;
-          justify-content: left;
-
-          .userImg {
-            width: 35px;
-            height: 35px;
-            margin-right: 10px;
-            border: $borderColor;
-            border-radius: 50%;
-          }
-
-          .userName {
-            display: flex;
-            align-items: center;
-          }
-        }
-        .userMenu {
-          display: flex;
-          align-items: center;
-          font-weight: bold;
-        }
-      }
-      .feedImg {
-        img {
-          width: 100%;
-        }
-      }
-      .feedTool {
-        padding: 10px;
-        border: $check-line;
-        img {
-          width: 10px;
-        }
-      }
-      .whoLike {
-        padding: 10px;
-        // border: $check-line;
-      }
-      .replyList {
-        padding: 0 10px;
-
-        li {
-          padding: 2px 0px;
-        }
-      }
-      .writeTime {
-        padding: 3px 10px 10px;
-      }
-
-      .replyForm {
-        position: relative;
-        input {
-          width: 100%;
-          padding: 12px 10px;
-          border: none;
-          border-top: $borderColor;
-        }
-        button {
-          position: absolute;
-          top: 50%;
-          right: 10px;
-          transform: translate(0, -50%);
-          border: none;
-          background-color: white;
-          color: blue;
-        }
-      }
-    }
+    width: 900px;
+    background-color: $backgroundColor;
   }
 
   .aside {
-    width: 450px;
+    width: 350px;
     height: 100px;
     border: $check-line;
   }
