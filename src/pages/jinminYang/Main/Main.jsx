@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Feed from './components/Feed';
 import { FOOTER_INFO_LIST } from './components/FOOTER_INFO_LIST';
 import './Main.scss';
 
 const Main = () => {
+  // 변수
+  const [feedList, setFeedList] = useState([]);
+
+  // 동작
+  useState(() => {
+    fetch(`/data/data.json`)
+      .then(res => res.json())
+      .then(res => setFeedList(res));
+  });
+
   // 출력
   return (
     <div className="main">
       {/* feeds */}
       <div className="feeds">
-        <Feed />
-        <Feed />
+        {feedList.map(item => (
+          <Feed key={item.id} item={item} />
+        ))}
+        {/* <Feed /> */}
       </div>
 
       {/* <!-- aside --> */}

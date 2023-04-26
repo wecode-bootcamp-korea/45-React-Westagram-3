@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "userId": "hahah_",
+    "userImg": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
+    "whoLike": "키키",
+    "whoLikeNum": 100,
+    "pastTime": 42
+  },
+  {
+    "id": 2,
+    "userId": "hohoh_",
+    "userImg": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
+    "whoLike": "캬캬",
+    "whoLikeNum": 2,
+    "pastTime": 32
+  }
+]
