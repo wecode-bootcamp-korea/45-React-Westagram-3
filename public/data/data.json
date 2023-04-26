@@ -3,16 +3,37 @@
     "id": 1,
     "userId": "hahah_",
     "userImg": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
+    "feedImg": "https://danawalab.github.io/images/2022-12-29-nextjs-devstory/10.gif",
     "whoLike": "키키",
     "whoLikeNum": 100,
-    "pastTime": 42
+    "pastTime": "42분전",
+    "reply": [
+      {
+        "replyId": 1,
+        "user": "하이",
+        "comment": "ㅋㅋ"
+      },
+      {
+        "replyId": 2,
+        "user": "왓썹",
+        "comment": "왔다감ㅎ"
+      }
+    ]
   },
   {
     "id": 2,
     "userId": "hohoh_",
     "userImg": "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E",
+    "feedImg": "https://3.bp.blogspot.com/-2t4eIUtXnow/VvKMu4Hi9CI/AAAAAAAABn8/NCVORcIjNXkCjINWm8YapmVyTVlBSKT8A/s1600/programmer-IRL-movie-tv-976741.gif",
     "whoLike": "캬캬",
     "whoLikeNum": 2,
-    "pastTime": 32
+    "pastTime": "32분전",
+    "reply": [
+      {
+        "replyId": 2,
+        "user": "여어~",
+        "comment": "ㅎ"
+      }
+    ]
   }
 ]

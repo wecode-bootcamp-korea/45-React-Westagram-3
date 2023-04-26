@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Reply from './components/Reply';
 import './Feed.scss';
 
-const Feed = () => {
+const Feed = ({
+  item: { userId, userImg, feedImg, whoLike, whoLikeNum, pastTime, reply },
+}) => {
   // 변수
-  const [id, setId] = useState(1);
+  const [replyId, setReplyId] = useState(1);
   const [comment, setComment] = useState(``);
-  const [REPLIES, setREPLIES] = useState([
-    { id: 0, user: `하이`, comment: `ㅋㅋ` },
-  ]);
+  const [REPLIES, setREPLIES] = useState(reply);
 
   // 함수
   const replyInput = e => {
@@ -18,8 +18,8 @@ const Feed = () => {
 
   const replyButton = () => {
     if (comment.length) {
-      setREPLIES([...REPLIES, { id, user: `메롱${id}`, comment }]);
-      setId(id => ++id);
+      setREPLIES([...REPLIES, { replyId, user: `메롱${replyId}`, comment }]);
+      setReplyId(replyId => ++replyId);
       setComment(``);
     } else {
       alert(`댓글을 입력하세요ㅎ`);
@@ -31,12 +31,8 @@ const Feed = () => {
       {/* userInfo */}
       <div className="userInfo">
         <div className="userSimpleProfile">
-          <img
-            className="userImg"
-            src="https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E"
-            alt=""
-          />
-          <div className="userName">hahah_</div>
+          <img className="userImg" src={userImg} alt="" />
+          <div className="userName">{userId}</div>
         </div>
         <div className="userMenu">
           <span>···</span>
@@ -44,10 +40,7 @@ const Feed = () => {
       </div>
       {/* feedImg */}
       <div className="feedImg">
-        <img
-          src="https://danawalab.github.io/images/2022-12-29-nextjs-devstory/10.gif"
-          alt=""
-        />
+        <img src={feedImg} alt="feedImg" />
       </div>
       {/* feedTool */}
       <div className="feedTool">
@@ -76,17 +69,19 @@ const Feed = () => {
       <div className="whoLike">
         <div className="whoIs">
           <div className="userImg" />
-          <div>키키 외 100명이 좋아합니다</div>
+          <div>
+            {whoLike} 외 {whoLikeNum}명이 좋아합니다
+          </div>
         </div>
       </div>
       {/* replyList */}
       <ul className="replyList">
         {REPLIES.map(reply => (
-          <Reply key={reply.id} reply={reply} />
+          <Reply key={reply.replyId} reply={reply} />
         ))}
       </ul>
       {/* writeTime */}
-      <div className="writeTime">42분전</div>
+      <div className="writeTime">{pastTime}</div>
       {/* replyInput */}
       <form className="replyForm" onSubmit={e => e.preventDefault()}>
         <input
