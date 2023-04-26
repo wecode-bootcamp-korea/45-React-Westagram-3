@@ -1,19 +1,18 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // 김준섭님의 컴포넌트
-import LoginJunsob from "./pages/junsobKim/Login/Login";
-import MainJunsob from "./pages/junsobKim/Main/Main";
+import LoginJunsob from './pages/junsobKim/Login/Login';
+import MainJunsob from './pages/junsobKim/Main/Main';
 
 // 박현아님의 컴포넌트
-import LoginHyunah from "./pages/hyunahPark/Login/Login";
-import MainHyunah from "./pages/hyunahPark/Main/Main";
+import LoginHyunah from './pages/hyunahPark/Login/Login';
+import MainHyunah from './pages/hyunahPark/Main/Main';
 
 // 양진민님의 컴포넌트
-import MainJinmin from "./pages/jinminYang/Main/Main";
-import LoginJinmin from "./pages/jinminYang/Login/Login";
-import Nav from "./components/Nav/Nav";
-import Reply from "./pages/jinminYang/components/Reply";
+import MainJinmin from './pages/jinminYang/Main/Main';
+import LoginJinmin from './pages/jinminYang/Login/Login';
+import Nav from './pages/jinminYang/components/Nav';
 
 const Router = () => {
   return (
@@ -33,7 +32,6 @@ const Router = () => {
         {/* 양진민님의 route */}
         <Route path="/login-jinmin" element={<LoginJinmin />} />
         <Route path="/main-jinmin" element={<MainJinmin />} />
-        <Route path="/test-jinmin" element={<Reply />} />
 
         <Route path="*" element="없는 페이지예용~" />
       </Routes>

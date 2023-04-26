@@ -1,17 +1,16 @@
 @import '/src/styles/variables';
 
 body {
-  background-color: #fafafa;
+  background-color: $backgroundColor;
 }
 
 .login {
-  width: 100%;
   width: 450px;
   padding: 30px;
 
   border: 2px solid #e6e6e6;
   background-color: white;
-  @include marginCenter(100);
+  @include marginCenter(200);
 
   .compNameDiv {
     margin: 20px;

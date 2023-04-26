@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import Reply from "./components/Reply";
-import "./Main.scss";
-import { FOOTER_INFO_LIST } from "./components/FOOTER_INFO_LIST";
+import React, { useState } from 'react';
+import { FOOTER_INFO_LIST } from './components/FOOTER_INFO_LIST';
+import './Main.scss';
+import Reply from './components/Reply';
 
 const Main = () => {
   // 변수
   const [id, setId] = useState(1);
   const [comment, setComment] = useState(``);
-  const [REPLY, setREPLY] = useState([
+  const [REPLIES, setREPLIES] = useState([
     { id: 0, user: `하이`, comment: `ㅋㅋ` },
   ]);
 
@@ -19,8 +19,7 @@ const Main = () => {
 
   const replyButton = () => {
     if (comment.length) {
-      REPLY.push({ id, user: `메롱${id}`, comment });
-      setREPLY(REPLY);
+      setREPLIES([...REPLIES, { id, user: `메롱${id}`, comment }]);
       setId(id => ++id);
       setComment(``);
     } else {
@@ -31,23 +30,33 @@ const Main = () => {
   // 출력
   return (
     <div className="main">
-      {/* <!-- section --> */}
-      <section>
-        <article>
+      {/* feeds */}
+      <div className="feeds">
+        <div className="feed">
+          {/* userInfo */}
           <div className="userInfo">
-            <div>
-              <div className="userImg" />
-              <div className="userName">
-                <span>hahah_</span>
-              </div>
+            <div className="userSimpleProfile">
+              <img
+                className="userImg"
+                src="https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E"
+                alt=""
+              />
+              <div className="userName">hahah_</div>
             </div>
             <div className="userMenu">
               <span>···</span>
             </div>
           </div>
-          <div className="feedsImgs" />
-          <div className="feedsWork">
-            <div className="wokrs">
+          {/* feedImg */}
+          <div className="feedImg">
+            <img
+              src="https://danawalab.github.io/images/2022-12-29-nextjs-devstory/10.gif"
+              alt=""
+            />
+          </div>
+          {/* feedTool */}
+          <div className="feedTool">
+            <div className="works">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
                 alt="heart"
@@ -68,47 +77,47 @@ const Main = () => {
               />
             </div>
           </div>
+          {/* whoLike */}
           <div className="whoLike">
             <div className="whoIs">
               <div className="userImg" />
-              <div>너당 외 100명이 좋아합니다</div>
+              <div>키키 외 100명이 좋아합니다</div>
             </div>
           </div>
-
-          {/* reply */}
-          <div>
-            {/* reply list */}
-            <ul>
-              {REPLY.map(reply => (
-                <Reply key={reply.id} reply={reply} />
-              ))}
-            </ul>
-            {/* input reply */}
-            <form onSubmit={e => e.preventDefault()}>
-              <input
-                type="text"
-                value={comment}
-                onChange={e => replyInput(e)}
-              />
-              <button onClick={() => replyButton()}>게시</button>
-            </form>
-          </div>
-        </article>
-      </section>
+          {/* replyList */}
+          <ul className="replyList">
+            {REPLIES.map(reply => (
+              <Reply key={reply.id} reply={reply} />
+            ))}
+          </ul>
+          {/* writeTime */}
+          <div className="writeTime">42분전</div>
+          {/* replyInput */}
+          <form className="replyForm" onSubmit={e => e.preventDefault()}>
+            <input
+              type="text"
+              value={comment}
+              placeholder="댓글 달기..."
+              onChange={e => replyInput(e)}
+            />
+            <button onClick={() => replyButton()}>게시</button>
+          </form>
+        </div>
+      </div>
 
       {/* <!-- aside --> */}
-      <aside>
+      <aside className="aside">
         {/* <!-- aside > me --> */}
-        <div className="me">
+        {/* <div className="me">
           <div className="myImg" />
           <div className="myName">
             <div className="myNickName">wecode_bootcamp</div>
             <div className="myRealkName">WeCode | 위코드</div>
           </div>
-        </div>
+        </div> */}
 
         {/* <!-- aside > story --> */}
-        <div className="story">
+        {/* <div className="story">
           <div className="rightHeaders">
             <span className="smallHeader">스토리</span>
             <span className="seeAll">모두 보기</span>
@@ -143,10 +152,10 @@ const Main = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* <!-- aside > recomendUser --> */}
-        <div className="recomendUser">
+        {/* <div className="recomendUser">
           <div className="rightHeaders">
             <span className="smallHeader">회원님을 위한 추천</span>
             <span className="seeAll">모두 보기</span>
@@ -183,18 +192,18 @@ const Main = () => {
               <div className="clickFollow">팔로우</div>
             </div>
           </div>
-        </div>
-      </aside>
+        </div> */}
 
-      {/* etc. */}
-      <footer>
-        <ul>
-          <li>소개</li>
-          {FOOTER_INFO_LIST.map(item => (
-            <li key={item.id}>{"\u00A0· " + item.menu}</li>
-          ))}
-        </ul>
-      </footer>
+        {/* etc. */}
+        {/* <footer className="footer">
+          <ul>
+            <li>소개</li>
+            {FOOTER_INFO_LIST.map(item => (
+              <li key={item.id}>{"\u00A0· " + item.menu}</li>
+            ))}
+          </ul>
+        </footer> */}
+      </aside>
     </div>
   );
 };

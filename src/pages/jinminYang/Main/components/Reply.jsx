@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
+import './Reply.scss';
 
 const Reply = ({ reply: { user, comment } }) => {
   return (
     <li>
-      {user}: {comment}
+      <span className="user">{user}</span>:
+      <span className="comment">{comment}</span>
     </li>
   );
 };
