@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Feed from "./Feed";
+import SideProfile from "./SideProfile";
+import Story from "./Story";
+import Recommendation from "./Recommendation";
 
 import "./Main.scss";
 
-import InstaIcon from "../../../assets/hyunahPark/instaicon.png";
-import ExploreIcon from "../../../assets/hyunahPark/explore.png";
-import heartIcon from "../../../assets/hyunahPark/heart.png";
-import profileIcon from "../../../assets/hyunahPark/profile.png";
 import { Link } from "react-router-dom";
 
 const USERNAME = "olive";
@@ -26,157 +25,17 @@ const Main = () => {
 
   return (
     <div className="main">
-      <nav className="nav">
-        <span className="navPart">
-          <img
-            alt="instagram icon"
-            src={InstaIcon}
-            className="instagramIcon"
-            width="40"
-          />
-          <span className="westagramLogo">&nbsp;westagram</span>
-        </span>
-
-        <span className="navPart">
-          <input type="text" className="search" placeholder="검색" />
-        </span>
-
-        <span className="navPart">
-          <img
-            alt="explore"
-            src={ExploreIcon}
-            className="exploreIcon"
-            width="40"
-          />
-          <img alt="heart" src={heartIcon} className="heartIcon" width="40" />
-          <img
-            alt="profile"
-            src={profileIcon}
-            className="profileIcon"
-            width="40"
-          />
-        </span>
-      </nav>
-
       <main className="mainPart">
         <div className="mainFeeds">
           {feeds.map(feed => {
-            return <Feed key={feed.id} feed={feed} />;
+            return <Feed key={feed.id} feed={feed} userName={USERNAME} />;
           })}
         </div>
 
         <div className="mainRight">
-          <div className="sideProfile">
-            <img
-              className="sideProfileImg"
-              alt="mm"
-              src="/images/hyunahPark/mm.jpg"
-              width="60"
-            />
-
-            <div className="sideProfileId">
-              <span className="sideProfileIdName">{USERNAME}</span>
-              <span>Hyunah Park</span>
-            </div>
-          </div>
-
-          <div className="story">
-            <div className="storyDomain">
-              <span className="storyTxt">스토리</span>
-              <span className="storyViewAll">모두보기</span>
-            </div>
-
-            <div className="storyProfile">
-              <img
-                className="storyProfileIdImg"
-                alt="icecream"
-                src="/images/hyunahPark/icecream.jpg"
-                width="50"
-              />
-
-              <div className="storyProfileId">
-                <span className="storyProfileIdName">hhyunah</span>
-                <span>Hyunah Park</span>
-              </div>
-            </div>
-
-            <div className="storyProfile">
-              <img
-                className="storyProfileIdImg"
-                alt="icecream"
-                src="/images/hyunahPark/icecream.jpg"
-                width="50"
-              />
-
-              <div className="storyProfileId">
-                <span className="storyProfileIdName">hhyunah</span>
-                <span>Hyunah Park</span>
-              </div>
-            </div>
-
-            <div className="storyProfile">
-              <img
-                className="storyProfileIdImg"
-                alt="icecream"
-                src="/images/hyunahPark/icecream.jpg"
-                width="50"
-              />
-
-              <div className="storyProfileId">
-                <span className="storyProfileIdName">hhyunah</span>
-                <span>Hyunah Park</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="recommendation">
-            <div className="recommendationDomain">
-              <span className="recTxt">회원님을 위한 추천</span>
-              <span className="recViewAll">모두보기</span>
-            </div>
-
-            <div className="recommendationProfile">
-              <img
-                className="recProfileIdImg"
-                alt="icecream"
-                src="/images/hyunahPark/icecream.jpg"
-                width="50"
-              />
-
-              <div className="recProfileId">
-                <span className="recProfileIdName">hhyunah</span>
-                <span>Hyunah Park</span>
-              </div>
-            </div>
-
-            <div className="recommendationProfile">
-              <img
-                className="recProfileIdImg"
-                alt="icecream"
-                src="/images/hyunahPark/icecream.jpg"
-                width="50"
-              />
-
-              <div className="recProfileId">
-                <span className="recProfileIdName">hhyunah</span>
-                <span>Hyunah Park</span>
-              </div>
-            </div>
-
-            <div className="recommendationProfile">
-              <img
-                className="recProfileIdImg"
-                alt="icecream"
-                src="/images/hyunahPark/icecream.jpg"
-                width="50"
-              />
-
-              <div className="recProfileId">
-                <span className="recProfileIdName">hhyunah</span>
-                <span>Hyunah Park</span>
-              </div>
-            </div>
-          </div>
+          <SideProfile user={USERNAME} />
+          <Story />
+          <Recommendation />
 
           <div className="aside">
             {FOOTER_INFO_LIST.map((info, index) => {

@@ -1,10 +1,9 @@
-@import "../mixin";
+@import "../../../styles/mixin";
 @import "../../../styles/variables";
 
 @mixin rightProfileId {
   display: flex;
   flex-direction: column;
-  // align-items: center;
 
   padding-left: 10px;
 }
@@ -16,34 +15,6 @@
 }
 
 ///////////
-
-.nav {
-  @include flexSort(space-between, none);
-
-  padding: 10px;
-
-  border-bottom: 1px solid $body-white;
-  background-color: white;
-
-  font-family: "Lobster";
-  font-size: 30pt;
-
-  .navPart {
-    @include flexSort(space-between, center);
-
-    .westagramLogo {
-      margin-left: 20px;
-      padding-left: 10px;
-
-      border-left: 2px solid black;
-    }
-  }
-
-  .search {
-    outline: none;
-    text-align: center;
-  }
-}
 
 .mainPart {
   display: flex;
@@ -59,8 +30,6 @@
     background-color: $body-white;
   }
 
-  //////////
-
   // 2. mainRight (1. mainFeeds -> article)
   .mainRight {
     flex-grow: 1;
@@ -70,113 +39,6 @@
 
     background-color: $body-white;
 
-    // 1. side profile
-    .sideProfile {
-      @include flexSort(none, center);
-
-      margin-bottom: 10px;
-
-      .sideProfileImg {
-        @include circleBorder;
-      }
-
-      .sideProfileId {
-        @include rightProfileId();
-
-        .sideProfileIdName {
-          @include bold;
-        }
-      }
-    }
-
-    // 2. story
-    .story {
-      width: 250px;
-
-      margin-bottom: 10px;
-      padding: 10px;
-
-      border: 1px solid $body-white;
-      background-color: white;
-
-      .storyDomain {
-        @include flexSort(space-between, center);
-
-        margin-bottom: 20px;
-
-        .storyTxt {
-          color: gray;
-          @include bold;
-        }
-
-        .storyViewAll {
-          @include bold;
-        }
-      }
-
-      .storyProfile {
-        display: flex;
-        align-items: center;
-
-        margin-bottom: 10px;
-
-        .storyProfileIdImg {
-          @include circleBorder;
-        }
-
-        .storyProfileId {
-          @include rightProfileId();
-
-          .storyProfileIdName {
-            @include bold;
-          }
-        }
-      }
-    }
-
-    // 3. recommendation
-    .recommendation {
-      width: 250px;
-
-      margin-bottom: 10px;
-      padding: 10px;
-
-      border: 1px solid $body-white;
-      background-color: white;
-
-      .recommendationDomain {
-        @include flexSort(space-between, center);
-
-        margin-bottom: 20px;
-
-        .recTxt {
-          color: gray;
-          @include bold;
-        }
-
-        .recViewAll {
-          @include bold;
-        }
-      }
-
-      .recommendationProfile {
-        @include flexSort(none, center);
-
-        margin-bottom: 10px;
-
-        .recProfileIdImg {
-          @include circleBorder;
-        }
-
-        .recProfileId {
-          @include rightProfileId();
-
-          .recProfileIdName {
-            @include bold;
-          }
-        }
-      }
-    }
     .aside {
       display: flex;
       flex-wrap: wrap;

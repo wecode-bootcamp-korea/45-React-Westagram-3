@@ -10,7 +10,10 @@
     "likeProfile": "mickey",
 
     "content": "집 보내줘! ♥",
-    "time": 43
+    "time": 43,
+
+    "commentUser": "bears",
+    "commentContent": "동굴밖은 위험해"
   },
   {
     "id": 2,
@@ -23,7 +26,10 @@
     "likeProfile": "mickey",
 
     "content": "사주세용  ♥",
-    "time": 28
+    "time": 28,
+
+    "commentUser": "disney",
+    "commentContent": "디즈니 100주년!!"
   },
   {
     "id": 3,
@@ -36,6 +42,9 @@
     "likeProfile": "mickey",
 
     "content": "LA에서 먹는 브런치 ♥",
-    "time": 15
+    "time": 15,
+
+    "commentUser": "mickey",
+    "commentContent": "계란 반숙"
   }
 ]

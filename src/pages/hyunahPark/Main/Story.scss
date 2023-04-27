@@ -1,0 +1,47 @@
+@import "../../../styles/mixin";
+@import "../../../styles/variables";
+
+// 2. story
+.story {
+  width: 250px;
+
+  margin-bottom: 10px;
+  padding: 10px;
+
+  border: 1px solid $body-white;
+  background-color: white;
+
+  .storyDomain {
+    @include flexSort(space-between, center);
+
+    margin-bottom: 20px;
+
+    .storyTxt {
+      color: gray;
+      @include bold;
+    }
+
+    .storyViewAll {
+      @include bold;
+    }
+  }
+
+  .storyProfile {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    .storyProfileIdImg {
+      @include circleBorder;
+    }
+
+    .storyProfileId {
+      @include rightProfileId();
+
+      .storyProfileIdName {
+        @include bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../styles/mixin";
+@import "../../../styles/variables";
+
+// 3. recommendation
+.recommendation {
+  width: 250px;
+
+  margin-bottom: 10px;
+  padding: 10px;
+
+  border: 1px solid $body-white;
+  background-color: white;
+
+  .recommendationDomain {
+    @include flexSort(space-between, center);
+
+    margin-bottom: 20px;
+
+    .recTxt {
+      color: gray;
+      @include bold;
+    }
+
+    .recViewAll {
+      @include bold;
+    }
+  }
+
+  .recommendationProfile {
+    @include flexSort(none, center);
+
+    margin-bottom: 10px;
+
+    .recProfileIdImg {
+      @include circleBorder;
+    }
+
+    .recProfileId {
+      @include rightProfileId();
+
+      .recProfileIdName {
+        @include bold;
+      }
+    }
+  }
+}

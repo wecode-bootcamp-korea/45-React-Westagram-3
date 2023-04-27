@@ -21,9 +21,7 @@ const Login = () => {
   };
 
   const handleSignupBtn = () => {
-    // navigate("/main-hyunah");
-    // setSignup({ email: userId, password: userPw });
-
+    // sign up (with Back-end)
     fetch("http://10.58.52.194:3000/users/signup", {
       method: "POST",
       headers: { "Content-type": "application/json;utf=8" },
@@ -34,9 +32,7 @@ const Login = () => {
   };
 
   const handleLoginBtn = () => {
-    // navigate("/main-hyunah");
-    // setSignup({ email: userId, password: userPw });
-
+    // log in (with Back-end)
     fetch("http://10.58.52.194:3000/users/login", {
       method: "POST",
       headers: { "Content-type": "application/json;utf=8" },
@@ -52,14 +48,6 @@ const Login = () => {
         }
       });
   };
-
-  const handleKeyUp = e => {
-    if (!isValidBtn && e.key === "Enter") {
-      // navigate("/main-hyunah");
-      // setSignup({ email: userId, password: userPw });
-    }
-  };
-
   return (
     <div className="login">
       <div className="loginBox">
@@ -71,7 +59,6 @@ const Login = () => {
             type="text"
             placeholder=" 전화번호, 사용자 이름 또는 이메일"
             onChange={saveUserID}
-            onKeyUp={handleKeyUp}
           />
           <input
             className="password"
@@ -79,7 +66,6 @@ const Login = () => {
             required
             placeholder=" 비밀번호"
             onChange={saveUserPw}
-            onKeyUp={handleKeyUp}
           />
           <button
             className={`button ${btnMode}`}

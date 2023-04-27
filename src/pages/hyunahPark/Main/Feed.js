@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import Comment from "./Comment";
 import "./Feed.scss";
 
-const USERNAME = "mcdonald";
-
-const Feed = ({ feed }) => {
+const Feed = ({ feed, userName }) => {
   const [commentArr, setCommentArr] = useState([]);
   const [inputTxt, setInputTxt] = useState("");
 
@@ -89,11 +87,15 @@ const Feed = ({ feed }) => {
       </div>
 
       <div className="articleReply">
-        {/* <Comment key={0} USERNAME="mickey" commentTxt="계란반숙" /> */}
+        <Comment
+          key={0}
+          USERNAME={feed.commentUser}
+          commentTxt={feed.commentContent}
+        />
 
         {/* 댓글 추가 */}
         {commentArr.map((commentTxt, index) => (
-          <Comment key={index} USERNAME={USERNAME} commentTxt={commentTxt} />
+          <Comment key={index} USERNAME={userName} commentTxt={commentTxt} />
         ))}
         {/* 댓글 추가 / */}
       </div>

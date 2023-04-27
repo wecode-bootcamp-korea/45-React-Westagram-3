@@ -11,3 +11,10 @@
 @mixin bold {
   font-weight: bold;
 }
+
+@mixin rightProfileId {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 10px;
+}
