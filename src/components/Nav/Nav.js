@@ -1,10 +1,9 @@
 import React from "react";
-import "./Nav.scss";
-
 import InstaIcon from "../../assets/hyunahPark/instaicon.png";
 import ExploreIcon from "../../assets/hyunahPark/explore.png";
 import heartIcon from "../../assets/hyunahPark/heart.png";
 import profileIcon from "../../assets/hyunahPark/profile.png";
+import "./Nav.scss";
 
 const Nav = () => {
   return (

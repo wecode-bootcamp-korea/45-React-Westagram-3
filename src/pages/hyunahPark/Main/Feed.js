@@ -28,7 +28,8 @@ const Feed = ({ feed, userName }) => {
   };
 
   const onRemove = idx => {
-    setCommentArr(commentArr.filter((_, index) => index !== idx));
+    e;
+    s3tCommentArr(commentArr.filter((_, index) => index !== idx));
   };
 
   return (
