@@ -114,7 +114,10 @@
     .details {
       margin: 15px;
       font-size: 13px;
-
+      .commentItem {
+        overflow: hidden;
+        word-wrap: break-word;
+      }
       .who {
         font-weight: bold;
       }
