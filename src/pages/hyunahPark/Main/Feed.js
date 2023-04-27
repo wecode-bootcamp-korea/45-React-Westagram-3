@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Comment from "./Comment";
 import "./Feed.scss";
 
@@ -25,6 +25,10 @@ const Feed = ({ feed, userName }) => {
     if (inputTxt) {
       addComment();
     }
+  };
+
+  const onRemove = idx => {
+    setCommentArr(commentArr.filter((_, index) => index !== idx));
   };
 
   return (
@@ -89,14 +93,23 @@ const Feed = ({ feed, userName }) => {
       <div className="articleReply">
         <Comment
           key={0}
-          USERNAME={feed.commentUser}
+          userName={feed.commentUser}
           commentTxt={feed.commentContent}
+          onRemove={onRemove}
         />
 
         {/* 댓글 추가 */}
-        {commentArr.map((commentTxt, index) => (
-          <Comment key={index} USERNAME={userName} commentTxt={commentTxt} />
-        ))}
+        {commentArr.map((commentTxt, index) => {
+          return (
+            <Comment
+              key={index}
+              index={index}
+              userName={userName}
+              commentTxt={commentTxt}
+              onRemove={onRemove}
+            />
+          );
+        })}
         {/* 댓글 추가 / */}
       </div>
 

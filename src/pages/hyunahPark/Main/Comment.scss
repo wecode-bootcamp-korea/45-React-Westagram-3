@@ -1,10 +1,14 @@
 @import "../../../styles/mixin";
 
 .comment {
+  &:hover {
+    background-color: rgb(100, 192, 235);
+  }
   .articleReplyAdd {
     @include flexSort(space-between, center);
     padding: 7px;
-    padding-top: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 
   .articleReplyProfileId {
