@@ -3,7 +3,16 @@ import Reply from './components/Reply';
 import './Feed.scss';
 
 const Feed = ({
-  item: { userId, userImg, feedImg, whoLike, whoLikeNum, pastTime, reply },
+  item: {
+    userId,
+    userImg,
+    feedImg,
+    whoLike,
+    whoLikeNum,
+    content,
+    pastTime,
+    reply,
+  },
   darkMode,
 }) => {
   // 변수
@@ -15,7 +24,6 @@ const Feed = ({
   const replyInput = e => {
     e.preventDefault();
     setComment(e.target.value);
-    console.log(`id`, replyId);
   };
 
   const replyButton = () => {
@@ -76,6 +84,8 @@ const Feed = ({
           </div>
         </div>
       </div>
+      {/* content */}
+      <div className="content">{content}z</div>
       {/* replyList */}
       <ul className="replyList">
         {REPLIES.map(reply => (

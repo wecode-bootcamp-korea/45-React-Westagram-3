@@ -13,6 +13,7 @@ import MainHyunah from './pages/hyunahPark/Main/Main';
 import MainJinmin from './pages/jinminYang/Main/Main';
 import LoginJinmin from './pages/jinminYang/Login/Login';
 import Nav from './pages/jinminYang/components/Nav';
+import Write from './pages/jinminYang/Feed/Write';
 
 const Router = () => {
   // 변수
@@ -46,6 +47,7 @@ const Router = () => {
           path="/main-jinmin"
           element={<MainJinmin darkMode={darkMode} setDarkMode={setDarkMode} />}
         />
+        <Route path="/post-write-jinmin" element={<Write />} />
 
         <Route path="*" element="없는 페이지예용~" />
       </Routes>

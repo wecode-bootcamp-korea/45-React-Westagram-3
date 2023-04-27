@@ -13,6 +13,7 @@ const Nav = ({ darkMode, setDarkMode }) => {
       <Link to="/login-jinmin">로그인</Link>
       <span> </span>
       <Link to="/main-jinmin">메인</Link>
+      <Link to="/post-write-jinmin">글쓰기</Link>
       <button onClick={() => setDarkMode(!darkMode)}>
         다크모드 {darkMode ? `on` : `off`}
       </button>
