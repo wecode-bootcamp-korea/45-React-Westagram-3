@@ -1,0 +1,135 @@
+@import "../../../styles/mixin";
+@import "../../../styles/variables";
+
+@mixin articleElePadding {
+  padding: 7px;
+  padding-top: 0px;
+}
+
+.feed {
+  width: 500px;
+
+  margin-bottom: 50px;
+
+  border: 1px solid $body-white;
+  background-color: white;
+
+  // 1) article head
+  .articleHead {
+    @include flexSort(space-between, none);
+
+    padding: 10px;
+
+    .articleProfile {
+      @include flexSort(space-between, center);
+
+      .mickeyProfileImg {
+        @include circleBorder;
+      }
+
+      .articleProfileId {
+        @include bold;
+      }
+    }
+  }
+
+  // 2) article main img
+
+  // 3) article react icon
+  .articleReactIcon {
+    @include flexSort(space-between, center);
+
+    @include articleElePadding();
+    margin-top: 5px;
+
+    & i {
+      font-size: 30px;
+    }
+
+    .articleReactIconRight {
+      @include flexSort(space-between, center);
+
+      width: 120px;
+
+      #articleReactIconHeart {
+        color: #ff007b;
+      }
+    }
+  }
+
+  // 4) article like
+
+  .articleLike {
+    @include flexSort(none, center);
+
+    @include articleElePadding();
+
+    .icecreamProfileImg {
+      @include circleBorder;
+    }
+
+    .articleLikeProfileId {
+      @include bold;
+    }
+
+    .articleLikeProfileEtc {
+      @include bold;
+    }
+  }
+
+  // 5) article content
+
+  .articleContent {
+    display: flex;
+
+    @include articleElePadding();
+
+    .articleContentProfileId {
+      @include bold;
+    }
+
+    .articleContentMore {
+      @include flexSort(space-between, end);
+
+      color: gray;
+      font-size: 14px;
+    }
+  }
+
+  // 6) article reply
+
+  // 7) article time
+
+  .articleTime {
+    @include articleElePadding();
+
+    border-bottom: 1px solid $body-white;
+
+    color: gray;
+  }
+
+  // 8) article reply input
+
+  .articleReplyInput {
+    @include flexSort(space-between, center);
+
+    @include articleElePadding();
+    padding-right: 3px;
+
+    .replyTxt {
+      width: 90%;
+      height: 30px;
+
+      border: none;
+      outline: none;
+
+      background-color: white;
+    }
+
+    .replyButton {
+      border: none;
+      outline: none;
+      background-color: white;
+    }
+  }
+}

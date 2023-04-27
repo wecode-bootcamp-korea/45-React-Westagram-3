@@ -1,0 +1,30 @@
+@import "../../styles/mixin";
+@import "../../styles/variables";
+
+.nav {
+  @include flexSort(space-between, none);
+
+  padding: 10px;
+
+  border-bottom: 1px solid $body-white;
+  background-color: white;
+
+  font-family: "Lobster";
+  font-size: 30pt;
+
+  .navPart {
+    @include flexSort(space-between, center);
+
+    .westagramLogo {
+      margin-left: 20px;
+      padding-left: 10px;
+
+      border-left: 2px solid black;
+    }
+  }
+
+  .search {
+    outline: none;
+    text-align: center;
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../../styles/mixin";
+@import "../../../styles/variables";
+
+@mixin rightProfileId {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 10px;
+}
+
+//body
+.main {
+  padding: 0%;
+  background-color: rgb(245, 245, 245);
+}
+
+///////////
+
+.mainPart {
+  display: flex;
+
+  // 1. mainFeeds (2. mainRight)
+  .mainFeeds {
+    width: 60%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    padding-left: 20%;
+
+    background-color: $body-white;
+  }
+
+  // 2. mainRight (1. mainFeeds -> article)
+  .mainRight {
+    flex-grow: 1;
+    padding-top: 50px;
+
+    padding-left: 1%;
+
+    background-color: $body-white;
+
+    .aside {
+      display: flex;
+      flex-wrap: wrap;
+      width: 20vw;
+
+      .footer {
+        display: flex;
+        width: fit-content;
+        white-space: pre-wrap;
+        .footerLink {
+          color: rgb(161, 161, 161);
+          font-weight: bold;
+          text-decoration: none;
+        }
+        .dot {
+          color: rgb(161, 161, 161);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

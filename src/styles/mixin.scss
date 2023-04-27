@@ -1,0 +1,20 @@
+@mixin flexSort($justify, $alignItemts) {
+  display: flex;
+  align-items: $alignItemts;
+  justify-content: $justify;
+}
+
+@mixin circleBorder {
+  border-radius: 70%;
+}
+
+@mixin bold {
+  font-weight: bold;
+}
+
+@mixin rightProfileId {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 10px;
+}

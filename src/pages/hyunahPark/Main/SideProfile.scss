@@ -1,0 +1,21 @@
+// 1. side profile
+@import "../../../styles/mixin";
+@import "../../../styles/variables";
+
+.sideProfile {
+  @include flexSort(none, center);
+
+  margin-bottom: 10px;
+
+  .sideProfileImg {
+    @include circleBorder;
+  }
+
+  .sideProfileId {
+    @include rightProfileId();
+
+    .sideProfileIdName {
+      @include bold;
+    }
+  }
+}
