@@ -4,6 +4,7 @@ import './Feed.scss';
 
 const Feed = ({
   item: { userId, userImg, feedImg, whoLike, whoLikeNum, pastTime, reply },
+  darkMode,
 }) => {
   // 변수
   const [replyId, setReplyId] = useState(1);
@@ -14,6 +15,7 @@ const Feed = ({
   const replyInput = e => {
     e.preventDefault();
     setComment(e.target.value);
+    console.log(`id`, replyId);
   };
 
   const replyButton = () => {
@@ -27,7 +29,7 @@ const Feed = ({
   };
 
   return (
-    <div className="feed">
+    <div className={`feed ${darkMode ? `darkMode` : `brightMode2`}`}>
       {/* userInfo */}
       <div className="userInfo">
         <div className="userSimpleProfile">

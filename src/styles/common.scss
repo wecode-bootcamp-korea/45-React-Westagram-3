@@ -1,3 +1,27 @@
+@import '/src/styles/variables';
+
 * {
   box-sizing: border-box;
+}
+
+.darkMode {
+  background-color: black;
+  color: white;
+  border: 1px solid #262626;
+}
+
+.darkModeBorder {
+  border: 1px solid #262626;
+}
+
+.brightMode1 {
+  background-color: white;
+}
+
+.brightMode2 {
+  background-color: #fafafa;
+}
+
+.brightModeBorder {
+  border: 1px solid #e6e6e6;
 }
