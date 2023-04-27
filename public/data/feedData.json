@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "user": "hhyunah",
+    "profileImg": "/images/hyunahPark/lasvegas.jpg",
+
+    "img": "/images/hyunahPark/home.jpg",
+
+    "likeImg": "/images/hyunahPark/icecream.jpg",
+    "likeProfile": "mickey",
+
+    "content": "집 보내줘! ♥",
+    "time": 43
+  },
+  {
+    "id": 2,
+    "user": "mickey",
+    "profileImg": "/images/hyunahPark/mickeyProfile.jpg",
+
+    "img": "/images/hyunahPark/clock.jpg",
+
+    "likeImg": "/images/hyunahPark/icecream.jpg",
+    "likeProfile": "mickey",
+
+    "content": "사주세용  ♥",
+    "time": 28
+  },
+  {
+    "id": 3,
+    "user": "olive",
+    "profileImg": "/images/hyunahPark/istp.jpg",
+
+    "img": "/images/hyunahPark/brunch.jpg",
+
+    "likeImg": "/images/hyunahPark/icecream.jpg",
+    "likeProfile": "mickey",
+
+    "content": "LA에서 먹는 브런치 ♥",
+    "time": 15
+  }
+]

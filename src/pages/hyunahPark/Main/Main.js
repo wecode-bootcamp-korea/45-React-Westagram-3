@@ -1,38 +1,28 @@
-import React, { useState } from "react";
-import Comment from "./Comment";
+import React, { useEffect, useState } from "react";
+import Feed from "./Feed";
+
 import "./Main.scss";
 
 import InstaIcon from "../../../assets/hyunahPark/instaicon.png";
 import ExploreIcon from "../../../assets/hyunahPark/explore.png";
 import heartIcon from "../../../assets/hyunahPark/heart.png";
 import profileIcon from "../../../assets/hyunahPark/profile.png";
+import { Link } from "react-router-dom";
 
 const USERNAME = "olive";
 
 const Main = () => {
-  const [commentArr, setCommentArr] = useState([]);
-  const [inputTxt, setInputTxt] = useState("");
+  const [feeds, setFeeds] = useState([]);
 
-  const addComment = () => {
-    setCommentArr([...commentArr, inputTxt]);
-    setInputTxt("");
-  };
-
-  const handleInput = e => {
-    setInputTxt(e.target.value);
-  };
-
-  const handleEnter = e => {
-    if (e.key === "Enter" && inputTxt) {
-      addComment();
-    }
-  };
-
-  const handleBtn = () => {
-    if (inputTxt) {
-      addComment();
-    }
-  };
+  useEffect(() => {
+    fetch("/data/feedData.json", {
+      method: "GET",
+    })
+      .then(res => res.json())
+      .then(data => {
+        setFeeds(data);
+      });
+  }, []);
 
   return (
     <div className="main">
@@ -70,94 +60,9 @@ const Main = () => {
 
       <main className="mainPart">
         <div className="mainFeeds">
-          <article className="articlePart">
-            <div className="articleHead">
-              <div className="articleProfile">
-                <img
-                  className="mickeyProfileImg"
-                  alt="mickey profile"
-                  src="/images/hyunahPark/mickeyProfile.jpg"
-                  width="25"
-                />
-                <span className="articleProfileId">&nbsp;hhyunah</span>
-              </div>
-
-              <div>
-                <i className="fa-solid fa-ellipsis" />
-              </div>
-            </div>
-
-            <img
-              className="articleMainImg"
-              alt="brunch"
-              src="/images/hyunahPark/brunch.jpg"
-              width="100%"
-            />
-
-            <div className="articleReactIcon">
-              <div className="articleReactIconRight">
-                <i className="fa-solid fa-heart" id="articleReactIconHeart" />
-                <i className="fa-regular fa-comment" />
-                <i className="fa-solid fa-arrow-up-from-bracket" />
-              </div>
-
-              <div>
-                <i className="fa-regular fa-bookmark" />
-              </div>
-            </div>
-
-            <div className="articleLike">
-              <img
-                className="icecreamProfileImg"
-                alt="icecream"
-                src="/images/hyunahPark/icecream.jpg"
-                width="25"
-              />
-
-              <span>
-                &nbsp;
-                <span className="articleLikeProfileId">mickey</span>님
-                <span className="articleLikeProfileEtc">&nbsp;외 10명</span>이
-                좋아합니다.
-              </span>
-            </div>
-
-            <div className="articleContent">
-              <span className="articleContentProfileId">hhyunah</span>
-              &nbsp;LA에서 먹는 브런치 ♥
-              <div className="articleContentMore">... 더 보기</div>
-            </div>
-
-            <div className="articleReply">
-              <Comment key={0} USERNAME="mickey" commentTxt="계란반숙" />
-
-              {/* 댓글 추가 */}
-              {commentArr.map((commentTxt, index) => (
-                <Comment
-                  key={index}
-                  USERNAME={USERNAME}
-                  commentTxt={commentTxt}
-                />
-              ))}
-              {/* 댓글 추가 / */}
-            </div>
-
-            <div className="articleTime">43분 전</div>
-
-            <div className="articleReplyInput">
-              <input
-                type="text"
-                className="replyTxt"
-                placeholder="댓글 달기..."
-                onChange={handleInput}
-                onKeyUp={handleEnter}
-                value={inputTxt}
-              />
-              <button className="replyButton" onClick={handleBtn}>
-                게시
-              </button>
-            </div>
-          </article>
+          {feeds.map(feed => {
+            return <Feed key={feed.id} feed={feed} />;
+          })}
         </div>
 
         <div className="mainRight">
@@ -272,6 +177,24 @@ const Main = () => {
               </div>
             </div>
           </div>
+
+          <div className="aside">
+            {FOOTER_INFO_LIST.map((info, index) => {
+              let dot = " · ";
+
+              if (FOOTER_INFO_LIST.length - 1 === index) dot = "";
+              if (info.id === 6) dot += "";
+
+              return (
+                <div key={info.id} className="footer">
+                  <Link className="footerLink" to={info.link}>
+                    {info.name}
+                  </Link>
+                  <span className="dot">&nbsp;{dot}&nbsp;</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </main>
     </div>
@@ -279,3 +202,17 @@ const Main = () => {
 };
 
 export default Main;
+
+const FOOTER_INFO_LIST = [
+  { id: 1, name: "소개", link: "/login-hyunah" },
+  { id: 2, name: "도움말", link: "/login-hyunah" },
+  { id: 3, name: "홍보 센터", link: "/login-hyunah" },
+  { id: 4, name: "API", link: "/login-hyunah" },
+  { id: 5, name: "채용 정보", link: "/login-hyunah" },
+  { id: 6, name: "개인정보처리방침", link: "/login-hyunah" },
+  { id: 7, name: "약관", link: "/login-hyunah" },
+  { id: 8, name: "위치", link: "/login-hyunah" },
+  { id: 9, name: "인기 계정", link: "/login-hyunah" },
+  { id: 10, name: "해시태그", link: "/login-hyunah" },
+  { id: 11, name: "언어", link: "/login-hyunah" },
+];
