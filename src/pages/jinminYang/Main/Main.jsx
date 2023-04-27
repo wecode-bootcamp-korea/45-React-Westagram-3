@@ -3,7 +3,7 @@ import Feed from './components/Feed';
 import { FOOTER_INFO_LIST } from './components/FOOTER_INFO_LIST';
 import './Main.scss';
 
-const Main = () => {
+const Main = ({ darkMode }) => {
   // 변수
   const [feedList, setFeedList] = useState([]);
 
@@ -16,11 +16,11 @@ const Main = () => {
 
   // 출력
   return (
-    <div className="main">
+    <div className={`main ${darkMode ? `darkMode` : `brightMode2`}`}>
       {/* feeds */}
-      <div className="feeds">
+      <div className={`feeds ${darkMode ? `darkMode` : `brightMode2`}`}>
         {feedList.map(item => (
-          <Feed key={item.id} item={item} />
+          <Feed key={item.id} item={item} darkMode={darkMode} />
         ))}
         {/* <Feed /> */}
       </div>

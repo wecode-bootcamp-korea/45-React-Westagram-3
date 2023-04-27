@@ -2,12 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.scss';
 
-const Nav = () => {
+const Nav = ({ darkMode, setDarkMode }) => {
+  // 출력
   return (
-    <div className="nav">
+    <div
+      className={`nav backgroundColorDark ${
+        darkMode ? `darkMode ` : `brightMode1`
+      }`}
+    >
       <Link to="/login-jinmin">로그인</Link>
       <span> </span>
       <Link to="/main-jinmin">메인</Link>
+      <button onClick={() => setDarkMode(!darkMode)}>
+        다크모드 {darkMode ? `on` : `off`}
+      </button>
       <div>Nav</div>
       {/* <div class="co">
         <div class="coImgDiv">
