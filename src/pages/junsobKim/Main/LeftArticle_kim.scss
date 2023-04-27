@@ -1,0 +1,159 @@
+.leftArticle_kim {
+  width: 400px;
+  border: 0.5px solid rgb(128, 128, 128);
+
+  .articleProfiles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 390px;
+    margin: 10px auto;
+
+    .articleP {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .imgArticleProfile {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        margin-left: 10px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+      }
+
+      .txtArticleProfile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      .txtArticleProfileS {
+        font-size: 11px;
+      }
+    }
+
+    .articleViewMore {
+      width: 20px;
+      margin-right: 10px;
+      background-image: url("../../../assets/junsobKim/icons/more.png");
+      background-size: cover;
+    }
+  }
+
+  .articleImg {
+    width: 400px;
+    height: auto;
+  }
+
+  .articleReact {
+    .reacting {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 20px;
+      margin-left: 10px;
+
+      .reactingS {
+        display: flex;
+        gap: 10px;
+
+        .heart {
+          width: 20px;
+          height: auto;
+          background-image: url(../../../assets/junsobKim/icons/heart.png);
+          background-size: cover;
+        }
+        .dm {
+          width: 20px;
+          height: auto;
+          background-image: url(../../../assets/junsobKim/icons/dm.png);
+          background-size: cover;
+        }
+        .share {
+          width: 20px;
+          height: auto;
+          background-image: url(../../../assets/junsobKim/icons/share.png);
+          background-size: cover;
+        }
+      }
+      .bookmark {
+        width: 20px;
+        height: auto;
+        margin-right: 10px;
+        background-image: url(../../../assets/junsobKim/icons/bookmark.png);
+        background-size: cover;
+      }
+    }
+
+    .reactingPeople {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .reactingImg {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        border-radius: 50%;
+      }
+
+      .whoLike {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .articleComment {
+    .details {
+      margin: 15px;
+      font-size: 13px;
+      .commentItem {
+        overflow: hidden;
+        word-wrap: break-word;
+      }
+      .who {
+        font-weight: bold;
+      }
+
+      .viewMore {
+        color: rgb(108, 108, 108);
+      }
+
+      .newCommentThings {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .newCommentTime {
+        margin-bottom: 7px;
+        font-size: 10px;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: row;
+
+      .comment {
+        flex: 1;
+        width: 350px;
+        height: 50px;
+        margin: 0px;
+        margin-right: 5px;
+        border: 0px;
+      }
+
+      .commentSubmit {
+        flex: none;
+      }
+    }
+  }
+}

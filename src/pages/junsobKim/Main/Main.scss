@@ -1,0 +1,36 @@
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable max-nesting-depth */
+a {
+  color: black;
+  text-decoration: none;
+
+  &:focus,
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+}
+
+body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.main-contents-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
